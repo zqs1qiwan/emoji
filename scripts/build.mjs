@@ -53,6 +53,9 @@ try { fs.chmodSync(path.join(dist, 'cli.js'), 0o755); } catch { /* Windows: set 
 for (const name of generatedFiles) {
   fs.copyFileSync(path.join(root, 'data/generated', name), path.join(dist, 'data/generated', name));
 }
-fs.writeFileSync(path.join(dist, 'data/generated/.gitignore'), '*\n!.gitignore\n');
+// TypeScript re-emits a restrictive .gitignore into this directory when it
+// copies the imported JSON. npm honors nested .gitignore rules and would omit
+// the runtime data from the tarball, so remove it after the emit.
+fs.rmSync(path.join(dist, 'data/generated/.gitignore'), { force: true });
 
 process.stdout.write(`Built ${fs.readdirSync(dist).length} files in dist.\n`);
