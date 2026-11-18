@@ -98,7 +98,7 @@ test('remote assets are opt-in and HTTPS-only', () => {
 test('generated data is deterministic and complete', () => {
   assert.equal(emojis.length, 1958);
   assert.equal(Object.keys(aliases).length >= 3800, true);
-  assert.equal(Object.keys(dataApps).length, 10);
+  assert.equal(Object.keys(dataApps).length, 28);
   assert.equal(emojiRecords.length, emojis.length);
   assert.equal(dataApps, rootApps);
   assert.equal(metadata.unicodeVersion, '18.0');

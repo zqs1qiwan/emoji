@@ -7,4 +7,5 @@ data/cache
 .DS_Store
 .env
 .env.*
+.agent-teams/
 !data/generated/**

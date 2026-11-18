@@ -1,8 +1,8 @@
 {
   "tiktok": {
     "id": "tiktok",
-    "label": "TikTok",
-    "note": "Unofficial curated mapping of documented TikTok bracket codes and common caption emojis. Not affiliated with TikTok.",
+    "label": "TikTok / 抖音",
+    "note": "非官方整理：TikTok 方括号暗语与短视频常见文案表情；与 TikTok/字节跳动无隶属关系。Unofficial mapping of documented TikTok bracket codes and common short-video caption emojis. Not affiliated with TikTok or ByteDance.",
     "source": "curated",
     "canonicalCategory": "trending",
     "categories": {
@@ -12,7 +12,11 @@
         "2728",
         "1F62D",
         "1F4AF",
-        "1F440"
+        "1F440",
+        "1F921",
+        "1FA91",
+        "1F480",
+        "1F382"
       ],
       "reactions": [
         "1F602",
@@ -20,7 +24,9 @@
         "1F622",
         "1F60D",
         "1F973",
-        "1F921"
+        "1F921",
+        "1F632",
+        "1F97A"
       ],
       "love": [
         "2764",
@@ -28,6 +34,16 @@
         "1F495",
         "1F496",
         "1F49E"
+      ],
+      "bracket_codes": [
+        "1F604",
+        "1F60D",
+        "1F60F",
+        "1F602",
+        "1F62D",
+        "1F97A",
+        "1F60E",
+        "1F60B"
       ]
     },
     "aliases": {
@@ -39,24 +55,460 @@
       "angry": "1F620",
       "cry": "1F62D",
       "crying": "1F62D",
+      "embarrassed": "1F92D",
       "surprised": "1F632",
       "wronged": "1F97A",
+      "shout": "1F631",
       "flushed": "1F633",
       "yummy": "1F60B",
       "cool": "1F60E",
+      "cute": "1F60D",
       "joyful": "1F602",
       "astonish": "1F632",
       "stun": "1F635",
       "speechless": "1F910",
       "sulk": "1F621",
       "nap": "1F634",
-      "heart": "2764"
+      "heart": "2764",
+      "complacent": "1F60F",
+      "drool": "1F924",
+      "scream": "1F631",
+      "weep": "1F62D",
+      "funnyface": "1F928",
+      "laughwithtears": "1F602",
+      "wicked": "1F608",
+      "smug": "1F60F",
+      "surprise": "1F632"
+    }
+  },
+  "douyin": {
+    "id": "douyin",
+    "label": "抖音",
+    "note": "非官方中文短视频文案分类；仅映射 Unicode 表情，不代表抖音官方表情或特效。Unofficial Chinese short-video caption grouping over Unicode emoji; not an official Douyin emoji/effect set.",
+    "source": "curated-zh",
+    "canonicalCategory": "captions",
+    "categories": {
+      "captions": [
+        "1F525",
+        "2728",
+        "2764",
+        "1F4F8",
+        "1F3C6"
+      ],
+      "reactions": [
+        "1F602",
+        "1F62D",
+        "1F632",
+        "1F921",
+        "1F97A"
+      ],
+      "daily": [
+        "2615",
+        "1F370",
+        "1F31E",
+        "1F3B5",
+        "1F4AB"
+      ]
+    },
+    "aliases": {
+      "douyin": "1F3B5",
+      "dou": "1F525",
+      "yin": "2728",
+      "recommend": "1F525",
+      "viral": "1F525",
+      "funny": "1F602",
+      "loveface": "1F60D",
+      "flower": "1F338",
+      "like": "2764"
+    }
+  },
+  "hongguo": {
+    "id": "hongguo",
+    "label": "红果短剧",
+    "note": "非官方短剧观后感/弹幕文案分类；无公开官方 shortcode 表，仅映射常见 Unicode 表情，不代表红果短剧官方表情。Unofficial grouping for short-drama comments/captions over Unicode emoji; no public official shortcode registry and no affiliation with Hongguo Short Drama.",
+    "source": "curated-zh",
+    "canonicalCategory": "captions",
+    "categories": {
+      "captions": [
+        "1F4FD",
+        "1F3AC",
+        "1F4FA",
+        "1F3C6",
+        "2728"
+      ],
+      "drama": [
+        "2764",
+        "1F62D",
+        "1F632",
+        "1F620",
+        "1F921"
+      ],
+      "comments": [
+        "1F525",
+        "1F440",
+        "1F4AF",
+        "1F44C",
+        "270D"
+      ]
+    },
+    "aliases": {
+      "hongguo": "1F4FD",
+      "short_drama": "1F3AC",
+      "drama": "1F4FA",
+      "episode": "1F4FD",
+      "actor": "1F3A8",
+      "handsome": "1F60E",
+      "beautiful": "2728",
+      "touching": "1F62D",
+      "addictive": "1F525",
+      "binge": "1F4FA"
+    }
+  },
+  "kuaishou": {
+    "id": "kuaishou",
+    "label": "快手",
+    "note": "非官方生活/直播场景 Unicode 表情分类；不代表快手官方表情。Unofficial daily/live-streaming Unicode grouping; not an official Kuaishou emoji set.",
+    "source": "curated-zh",
+    "canonicalCategory": "daily",
+    "categories": {
+      "daily": [
+        "1F604",
+        "1F31E",
+        "2615",
+        "1F35A",
+        "1F3E0"
+      ],
+      "live": [
+        "1F4F9",
+        "1F3A4",
+        "1F381",
+        "1F3C6",
+        "1F525"
+      ],
+      "reactions": [
+        "1F602",
+        "1F44C",
+        "2764",
+        "1F62D",
+        "1F632"
+      ]
+    },
+    "aliases": {
+      "kuaishou": "1F31E",
+      "live": "1F4F9",
+      "gift": "1F381",
+      "follow": "2795",
+      "like": "2764"
+    }
+  },
+  "xiaohongshu": {
+    "id": "xiaohongshu",
+    "label": "小红书",
+    "note": "非官方种草/穿搭/美食 Unicode 表情分类；不代表小红书官方表情。Unofficial lifestyle/fashion/food Unicode grouping; not an official Xiaohongshu emoji set.",
+    "source": "curated-zh",
+    "canonicalCategory": "captions",
+    "categories": {
+      "captions": [
+        "2728",
+        "2764",
+        "1F4F8",
+        "1F4DD",
+        "1F516"
+      ],
+      "aesthetic": [
+        "1F90D",
+        "1F338",
+        "1F33F",
+        "2615",
+        "1F370"
+      ],
+      "shopping": [
+        "1F6D2",
+        "1F381",
+        "1F4B0",
+        "1F3C6",
+        "2B50"
+      ]
+    },
+    "aliases": {
+      "xhs": "2728",
+      "xiaohongshu": "2764",
+      "plant": "1F33F",
+      "review": "1F4DD",
+      "save": "1F516",
+      "outfit": "1F455",
+      "food": "1F355"
+    }
+  },
+  "wechat": {
+    "id": "wechat",
+    "label": "微信",
+    "note": "非官方聊天/红包/状态 Unicode 表情分类；微信自带表情贴图与表情商店不在本项目中。Unofficial chat/red-packet/status Unicode grouping; WeChat sticker packs are not included.",
+    "source": "curated-zh",
+    "canonicalCategory": "chat",
+    "categories": {
+      "chat": [
+        "1F604",
+        "1F602",
+        "1F44B",
+        "1F44C",
+        "1F4AC"
+      ],
+      "red_packet": [
+        "1F381",
+        "1F4B0",
+        "1F4B5",
+        "1F4AF",
+        "1F389"
+      ],
+      "status": [
+        "2615",
+        "1F634",
+        "2708",
+        "1F3D6",
+        "2764"
+      ]
+    },
+    "aliases": {
+      "wechat": "1F4AC",
+      "redpacket": "1F381",
+      "hongbao": "1F381",
+      "moments": "1F4F7",
+      "chat": "1F4AC",
+      "thanks": "1F64F"
+    }
+  },
+  "weibo": {
+    "id": "weibo",
+    "label": "微博",
+    "note": "非官方话题/转发/热搜 Unicode 表情分类；不代表微博官方表情。Unofficial topic/repost/trending Unicode grouping; not an official Weibo emoji set.",
+    "source": "curated-zh",
+    "canonicalCategory": "social",
+    "categories": {
+      "trending": [
+        "1F525",
+        "1F4AF",
+        "1F440",
+        "1F3C6",
+        "1F4E3"
+      ],
+      "social": [
+        "1F4AC",
+        "1F501",
+        "2764",
+        "0023-20E3",
+        "1F310"
+      ],
+      "reactions": [
+        "1F602",
+        "1F62D",
+        "1F632",
+        "1F620",
+        "1F44C"
+      ]
+    },
+    "aliases": {
+      "weibo": "1F4AC",
+      "topic": "0023-20E3",
+      "repost": "1F501",
+      "hotsearch": "1F525",
+      "follow": "2795",
+      "like": "2764"
+    }
+  },
+  "bilibili": {
+    "id": "bilibili",
+    "label": "哔哩哔哩",
+    "note": "非官方弹幕/投币/追番 Unicode 表情分类；B 站官方小电视与会员表情贴图不在本项目中。Unofficial danmaku/coin/anime Unicode grouping; official Bilibili stickers are not included.",
+    "source": "curated-zh",
+    "canonicalCategory": "chat",
+    "categories": {
+      "danmaku": [
+        "1F4AC",
+        "1F602",
+        "1F62D",
+        "1F525",
+        "1F440"
+      ],
+      "support": [
+        "1FA99",
+        "2B50",
+        "1F3C6",
+        "2764",
+        "1F44F"
+      ],
+      "anime": [
+        "1F4FA",
+        "1F4FD",
+        "2728",
+        "1F3A8",
+        "1F4AB"
+      ]
+    },
+    "aliases": {
+      "bili": "1F4FA",
+      "bilibili": "1F4FA",
+      "danmaku": "1F4AC",
+      "coin": "1FA99",
+      "favorite": "2B50",
+      "anime": "1F4FA",
+      "up": "2B06"
+    }
+  },
+  "qq": {
+    "id": "qq",
+    "label": "QQ",
+    "note": "非官方聊天/QQ 秀/群管理 Unicode 表情分类；QQ 原创黄脸表情贴图不在本项目中。Unofficial chat/avatar/group-management Unicode grouping; QQ's original sticker packs are not included.",
+    "source": "curated-zh",
+    "canonicalCategory": "chat",
+    "categories": {
+      "chat": [
+        "1F604",
+        "1F602",
+        "1F44B",
+        "1F44C",
+        "2764"
+      ],
+      "group": [
+        "1F451",
+        "2B50",
+        "1F6E1",
+        "26A0",
+        "1F528"
+      ],
+      "status": [
+        "1F7E2",
+        "1F634",
+        "2615",
+        "1F3B5",
+        "1F3B2"
+      ]
+    },
+    "aliases": {
+      "qq": "1F604",
+      "qzone": "1F4F7",
+      "group": "1F465",
+      "online": "1F7E2",
+      "away": "1F7E1",
+      "busy": "1F534"
+    }
+  },
+  "taobao": {
+    "id": "taobao",
+    "label": "淘宝",
+    "note": "非官方购物/评价/物流 Unicode 表情分类；不代表淘宝官方表情。Unofficial shopping/review/shipping Unicode grouping; not an official Taobao emoji set.",
+    "source": "curated-zh",
+    "canonicalCategory": "shopping",
+    "categories": {
+      "shopping": [
+        "1F6D2",
+        "1F6D2",
+        "1F381",
+        "1F4B0",
+        "2B50"
+      ],
+      "reviews": [
+        "2764",
+        "1F525",
+        "1F44D",
+        "1F4F7",
+        "1F4DD"
+      ],
+      "shipping": [
+        "1F4E6",
+        "2708",
+        "1F69A",
+        "2714",
+        "231B"
+      ]
+    },
+    "aliases": {
+      "taobao": "1F6D2",
+      "buy": "1F6D2",
+      "cart": "1F6D2",
+      "order": "1F4DD",
+      "review": "2B50",
+      "refund": "1F519"
+    }
+  },
+  "pinduoduo": {
+    "id": "pinduoduo",
+    "label": "拼多多",
+    "note": "非官方拼团/优惠/评价 Unicode 表情分类；不代表拼多多官方表情。Unofficial group-buy/discount/review Unicode grouping; not an official Pinduoduo emoji set.",
+    "source": "curated-zh",
+    "canonicalCategory": "shopping",
+    "categories": {
+      "shopping": [
+        "1F6D2",
+        "1F381",
+        "1F4B0",
+        "1F4AF",
+        "1F525"
+      ],
+      "group_buy": [
+        "1F465",
+        "1F91D",
+        "1F389",
+        "2B50",
+        "1F3C6"
+      ],
+      "reviews": [
+        "1F604",
+        "1F44C",
+        "2764",
+        "1F4F7",
+        "1F4DD"
+      ]
+    },
+    "aliases": {
+      "pdd": "1F6D2",
+      "groupbuy": "1F465",
+      "deal": "1F4B0",
+      "coupon": "1F3AB",
+      "discount": "1F4AF"
+    }
+  },
+  "meituan": {
+    "id": "meituan",
+    "label": "美团",
+    "note": "非官方外卖/到店/评价 Unicode 表情分类；不代表美团官方表情。Unofficial food-delivery/local-services Unicode grouping; not an official Meituan emoji set.",
+    "source": "curated-zh",
+    "canonicalCategory": "daily",
+    "categories": {
+      "delivery": [
+        "1F6B2",
+        "1F6F4",
+        "1F4E6",
+        "231B",
+        "260E"
+      ],
+      "food": [
+        "1F355",
+        "1F354",
+        "2615",
+        "1F370",
+        "1F35A"
+      ],
+      "reviews": [
+        "2B50",
+        "2764",
+        "1F604",
+        "1F44C",
+        "1F4DD"
+      ]
+    },
+    "aliases": {
+      "meituan": "1F6B2",
+      "takeout": "1F4E6",
+      "delivery": "1F6F4",
+      "food": "1F355",
+      "coupon": "1F3AB"
     }
   },
   "instagram": {
     "id": "instagram",
     "label": "Instagram",
-    "note": "Curated caption and story categories. Instagram does not publish a public shortcode registry.",
+    "note": "非官方文案/故事/审美分类；Instagram 不公开官方 shortcode 表。Curated caption, story and aesthetic categories; Instagram does not publish a public shortcode registry.",
     "source": "curated",
     "canonicalCategory": "captions",
     "categories": {
@@ -65,7 +517,9 @@
         "2764",
         "1F525",
         "1F4F8",
-        "1F31E"
+        "1F31E",
+        "1F355",
+        "2603"
       ],
       "aesthetic": [
         "1F90D",
@@ -106,6 +560,7 @@
         "2764",
         "1F389",
         "1F440",
+        "1F602",
         "1F615",
         "1F680"
       ],
@@ -163,7 +618,7 @@
   "slack": {
     "id": "slack",
     "label": "Slack",
-    "note": "Uses the shared colon-shortcode convention. Workspace custom emoji are not included.",
+    "note": "Uses the shared colon-shortcode convention derived from iamcal/emoji-data. Workspace custom emoji are not included.",
     "source": "curated",
     "canonicalCategory": "reactions",
     "categories": {
@@ -172,6 +627,7 @@
         "1F440",
         "1F389",
         "2764",
+        "1F602",
         "1F44A"
       ],
       "status": [
@@ -179,7 +635,8 @@
         "1F7E1",
         "1F534",
         "1F4C5",
-        "1F4DD"
+        "1F4DD",
+        "2728"
       ]
     },
     "aliases": {
@@ -187,7 +644,8 @@
       "eyes": "1F440",
       "tada": "1F389",
       "facepunch": "1F44A",
-      "memo": "1F4DD"
+      "memo": "1F4DD",
+      "sparkles": "2728"
     }
   },
   "whatsapp": {
@@ -223,7 +681,7 @@
   "telegram": {
     "id": "telegram",
     "label": "Telegram",
-    "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+    "note": "Curated aliases over Unicode emoji; animated emoji and custom stickers are not bundled.",
     "source": "curated",
     "canonicalCategory": "reactions",
     "categories": {
@@ -234,6 +692,14 @@
         "1F602",
         "1F62D",
         "1F440"
+      ],
+      "interactive": [
+        "1F389",
+        "1F388",
+        "1F44D",
+        "1F4A9",
+        "1F386",
+        "1F525"
       ],
       "communication": [
         "2709",
@@ -246,13 +712,15 @@
     "aliases": {
       "message": "1F4AC",
       "call": "260E",
-      "mail": "2709"
+      "mail": "2709",
+      "interactive": "1F389",
+      "fireworks": "1F386"
     }
   },
   "twitter": {
     "id": "twitter",
     "label": "X / Twitter",
-    "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+    "note": "Curated aliases over Unicode emoji; Twemoji is an open-source design set and no proprietary artwork is bundled.",
     "source": "curated",
     "canonicalCategory": "reactions",
     "categories": {
@@ -281,14 +749,18 @@
   "facebook": {
     "id": "facebook",
     "label": "Facebook",
-    "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+    "note": "Curated approximations of publicly documented Facebook reactions; animated proprietary reaction artwork is not bundled.",
     "source": "curated",
     "canonicalCategory": "reactions",
     "categories": {
       "reactions": [
         "1F44D",
         "2764",
-        "1F620"
+        "1F602",
+        "1F632",
+        "1F62D",
+        "1F620",
+        "1F917"
       ],
       "sharing": [
         "1F4AC",
@@ -302,13 +774,204 @@
       "wow": "1F632",
       "sad": "1F62D",
       "angry": "1F620",
-      "thumbsup": "1F44D"
+      "thumbsup": "1F44D",
+      "care": "1F917"
+    }
+  },
+  "reddit": {
+    "id": "reddit",
+    "label": "Reddit",
+    "note": "非官方社区/投票/梗图 Unicode 表情分类；不代表 Reddit 官方表情。Unofficial community/voting/meme Unicode grouping; not an official Reddit emoji set.",
+    "source": "curated",
+    "canonicalCategory": "community",
+    "categories": {
+      "voting": [
+        "2B06",
+        "2B07",
+        "1F4AF",
+        "1F525",
+        "1F3C6"
+      ],
+      "community": [
+        "1F4AC",
+        "1F465",
+        "0023-20E3",
+        "1F310",
+        "1F4DD"
+      ],
+      "memes": [
+        "1F602",
+        "1F921",
+        "1F632",
+        "1F480",
+        "2728"
+      ]
+    },
+    "aliases": {
+      "reddit": "1F4AC",
+      "upvote": "2B06",
+      "downvote": "2B07",
+      "subreddit": "0023-20E3",
+      "karma": "1F3C6",
+      "meme": "1F602"
+    }
+  },
+  "linkedin": {
+    "id": "linkedin",
+    "label": "LinkedIn",
+    "note": "非官方职场/求职/动态 Unicode 表情分类；不代表 LinkedIn 官方表情。Unofficial professional/job/post Unicode grouping; not an official LinkedIn emoji set.",
+    "source": "curated",
+    "canonicalCategory": "work",
+    "categories": {
+      "work": [
+        "1F4BC",
+        "1F4BB",
+        "1F4DD",
+        "1F4C5",
+        "1F4C8"
+      ],
+      "career": [
+        "1F3C6",
+        "2B50",
+        "1F680",
+        "1F4A1",
+        "1F91D"
+      ],
+      "posts": [
+        "1F4AC",
+        "1F440",
+        "1F44D",
+        "25B6",
+        "2728"
+      ]
+    },
+    "aliases": {
+      "linkedin": "1F4BC",
+      "job": "1F4BC",
+      "career": "1F4C8",
+      "network": "1F91D",
+      "hire": "1F3C6",
+      "inspire": "1F4A1"
+    }
+  },
+  "youtube": {
+    "id": "youtube",
+    "label": "YouTube",
+    "note": "非官方视频/直播/订阅 Unicode 表情分类；不代表 YouTube 官方表情。Unofficial video/live/subscription Unicode grouping; not an official YouTube emoji set.",
+    "source": "curated",
+    "canonicalCategory": "video",
+    "categories": {
+      "video": [
+        "1F4F9",
+        "25B6",
+        "1F4FA",
+        "1F4FD",
+        "1F3AC"
+      ],
+      "live": [
+        "1F534",
+        "1F3A4",
+        "1F525",
+        "1F440",
+        "1F3C6"
+      ],
+      "creator": [
+        "1F514",
+        "2764",
+        "1F514",
+        "2728",
+        "1F4F7"
+      ]
+    },
+    "aliases": {
+      "youtube": "1F4F9",
+      "video": "1F4F9",
+      "live": "1F534",
+      "subscribe": "1F514",
+      "like": "2764",
+      "shorts": "1F4FD"
+    }
+  },
+  "threads": {
+    "id": "threads",
+    "label": "Threads",
+    "note": "非官方轻社交/回复/发帖 Unicode 表情分类；不代表 Threads 官方表情。Unofficial casual-social/reply/post Unicode grouping; not an official Threads emoji set.",
+    "source": "curated",
+    "canonicalCategory": "social",
+    "categories": {
+      "social": [
+        "1F4AC",
+        "2764",
+        "1F440",
+        "1F501",
+        "0023-20E3"
+      ],
+      "replies": [
+        "1F602",
+        "1F62D",
+        "1F632",
+        "1F44C",
+        "2728"
+      ],
+      "posting": [
+        "1F4DD",
+        "1F4F7",
+        "1F310",
+        "1F9F5",
+        "25B6"
+      ]
+    },
+    "aliases": {
+      "threads": "1F9F5",
+      "thread": "1F9F5",
+      "reply": "1F4AC",
+      "post": "1F4DD",
+      "quote": "25B6",
+      "follow": "2795"
+    }
+  },
+  "pinterest": {
+    "id": "pinterest",
+    "label": "Pinterest",
+    "note": "非官方灵感/收藏/手作 Unicode 表情分类；不代表 Pinterest 官方表情。Unofficial inspiration/save/DIY Unicode grouping; not an official Pinterest emoji set.",
+    "source": "curated",
+    "canonicalCategory": "discovery",
+    "categories": {
+      "discovery": [
+        "2728",
+        "1F440",
+        "1F4A1",
+        "1F4F7",
+        "2B50"
+      ],
+      "boards": [
+        "1F516",
+        "1F4CC",
+        "1F4DD",
+        "2764",
+        "1F3C6"
+      ],
+      "diy": [
+        "2702",
+        "1F9F5",
+        "1F3A8",
+        "1F381",
+        "1F3E0"
+      ]
+    },
+    "aliases": {
+      "pinterest": "1F4CC",
+      "pin": "1F4CC",
+      "board": "1F516",
+      "inspiration": "1F4A1",
+      "diy": "2702",
+      "save": "1F516"
     }
   },
   "twitch": {
     "id": "twitch",
     "label": "Twitch",
-    "note": "Channel/global emotes require the official authenticated Twitch API and are not bundled.",
+    "note": "Channel/global emotes require the official authenticated Twitch API and are not bundled; only Unicode approximations are grouped here.",
     "source": "curated",
     "canonicalCategory": "chat",
     "categories": {
@@ -317,7 +980,9 @@
         "1F602",
         "2764",
         "1F525",
-        "1F440"
+        "1F440",
+        "1F525",
+        "1F60F"
       ],
       "streaming": [
         "1F4F9",
@@ -331,7 +996,81 @@
       "hype": "1F525",
       "pog": "1F632",
       "gg": "1F44C",
-      "stream": "1F4F9"
+      "stream": "1F4F9",
+      "kappa": "1F60F",
+      "lul": "1F602"
+    }
+  },
+  "snapchat": {
+    "id": "snapchat",
+    "label": "Snapchat",
+    "note": "非官方好友状态/Streak 表情含义分类；基于公开资料，不代表 Snapchat 官方表情。Unofficial friend-status/streak meaning grouping from public documentation; not an official Snapchat emoji set.",
+    "source": "curated",
+    "canonicalCategory": "status",
+    "categories": {
+      "streak": [
+        "1F525",
+        "1F4AF",
+        "231B",
+        "2728",
+        "1F382"
+      ],
+      "friends": [
+        "1F49B",
+        "2764",
+        "1F495",
+        "1F476",
+        "1F60E"
+      ],
+      "meanings": [
+        "1F62C",
+        "1F60F",
+        "1F604",
+        "1F3C6",
+        "2650"
+      ]
+    },
+    "aliases": {
+      "streak": "1F525",
+      "bestfriend": "1F49B",
+      "replay": "1F501",
+      "snapstreak": "1F525",
+      "hourglass": "231B"
+    }
+  },
+  "native": {
+    "id": "native",
+    "label": "原生平台 / Native platforms",
+    "note": "按公开资料整理的 Apple、Google、Samsung、Microsoft 等平台设计分类；仅作元数据分组，不捆绑或承诺像素级一致的平台图片。Unofficial grouping for Apple/Google/Samsung/Microsoft platform designs; no bundled artwork and no pixel-identical rendering claims.",
+    "source": "curated",
+    "canonicalCategory": "platforms",
+    "categories": {
+      "platforms": [
+        "1F34E",
+        "1F310",
+        "1F4F1",
+        "1F4BB",
+        "1F603",
+        "1F423",
+        "1F44B",
+        "1F310"
+      ],
+      "designs": [
+        "1F604",
+        "2764",
+        "1F525",
+        "1F389",
+        "1F680"
+      ]
+    },
+    "aliases": {
+      "apple": "1F34E",
+      "google": "1F310",
+      "android": "1F916",
+      "samsung": "1F4F1",
+      "microsoft": "1F4BB",
+      "joypixels": "1F310",
+      "native": "2728"
     }
   }
 }

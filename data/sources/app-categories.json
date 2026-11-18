@@ -2,14 +2,15 @@
   "apps": [
     {
       "id": "tiktok",
-      "label": "TikTok",
-      "note": "Unofficial curated mapping of documented TikTok bracket codes and common caption emojis. Not affiliated with TikTok.",
+      "label": "TikTok / 抖音",
+      "note": "非官方整理：TikTok 方括号暗语与短视频常见文案表情；与 TikTok/字节跳动无隶属关系。Unofficial mapping of documented TikTok bracket codes and common short-video caption emojis. Not affiliated with TikTok or ByteDance.",
       "source": "curated",
       "canonicalCategory": "trending",
       "categories": {
-        "trending": ["fire", "heart", "sparkles", "sob", "100", "eyes"],
-        "reactions": ["joy", "smile", "cry", "heart_eyes", "partying_face", "clown_face"],
-        "love": ["heart", "heart_eyes", "two_hearts", "sparkling_heart", "revolving_hearts"]
+        "trending": ["fire", "heart", "sparkles", "sob", "100", "eyes", "clown_face", "chair", "skull", "birthday"],
+        "reactions": ["joy", "smile", "cry", "heart_eyes", "partying_face", "clown_face", "astonished", "pleading_face"],
+        "love": ["heart", "heart_eyes", "two_hearts", "sparkling_heart", "revolving_hearts"],
+        "bracket_codes": ["smile", "heart_eyes", "smirk", "joy", "sob", "pleading_face", "sunglasses", "yum"]
       },
       "aliases": {
         "fire": "fire",
@@ -19,14 +20,14 @@
         "angry": "angry_face",
         "cry": "sob",
         "crying": "sob",
-        "embarrassed": "awkward",
+        "embarrassed": "face_with_hand_over_mouth",
         "surprised": "astonished",
         "wronged": "pleading_face",
-        "shout": "loud_cry",
+        "shout": "scream",
         "flushed": "flushed",
         "yummy": "yum",
         "cool": "sunglasses",
-        "cute": "smiling_face_with_heart-eyes",
+        "cute": "smiling_face_with_heart_eyes",
         "joyful": "joy",
         "astonish": "astonished",
         "stun": "dizzy_face",
@@ -34,17 +35,252 @@
         "sulk": "pouting_face",
         "nap": "sleeping",
         "100": "100",
-        "heart": "heart"
+        "heart": "heart",
+        "complacent": "smirk",
+        "drool": "drooling_face",
+        "scream": "scream",
+        "weep": "sob",
+        "funnyface": "face_with_raised_eyebrow",
+        "laughwithtears": "joy",
+        "wicked": "smiling_face_with_horns",
+        "smug": "smirk",
+        "surprise": "astonished"
+      }
+    },
+    {
+      "id": "douyin",
+      "label": "抖音",
+      "note": "非官方中文短视频文案分类；仅映射 Unicode 表情，不代表抖音官方表情或特效。Unofficial Chinese short-video caption grouping over Unicode emoji; not an official Douyin emoji/effect set.",
+      "source": "curated-zh",
+      "canonicalCategory": "captions",
+      "categories": {
+        "captions": ["fire", "sparkles", "heart", "camera_with_flash", "trophy"],
+        "reactions": ["joy", "sob", "astonished", "clown_face", "pleading_face"],
+        "daily": ["coffee", "cake", "sun_with_face", "musical_note", "dizzy"]
+      },
+      "aliases": {
+        "douyin": "musical_note",
+        "dou": "fire",
+        "yin": "sparkles",
+        "recommend": "fire",
+        "viral": "fire",
+        "funny": "joy",
+        "loveface": "heart_eyes",
+        "flower": "cherry_blossom",
+        "like": "heart"
+      }
+    },
+    {
+      "id": "hongguo",
+      "label": "红果短剧",
+      "note": "非官方短剧观后感/弹幕文案分类；无公开官方 shortcode 表，仅映射常见 Unicode 表情，不代表红果短剧官方表情。Unofficial grouping for short-drama comments/captions over Unicode emoji; no public official shortcode registry and no affiliation with Hongguo Short Drama.",
+      "source": "curated-zh",
+      "canonicalCategory": "captions",
+      "categories": {
+        "captions": ["film_projector", "clapper_board", "tv", "trophy", "sparkles"],
+        "drama": ["heart", "sob", "astonished", "angry_face", "clown_face"],
+        "comments": ["fire", "eyes", "100", "ok_hand", "writing_hand"]
+      },
+      "aliases": {
+        "hongguo": "film_projector",
+        "short_drama": "clapper_board",
+        "drama": "tv",
+        "episode": "film_projector",
+        "actor": "artist_palette",
+        "handsome": "sunglasses",
+        "beautiful": "sparkles",
+        "touching": "sob",
+        "addictive": "fire",
+        "binge": "tv"
+      }
+    },
+    {
+      "id": "kuaishou",
+      "label": "快手",
+      "note": "非官方生活/直播场景 Unicode 表情分类；不代表快手官方表情。Unofficial daily/live-streaming Unicode grouping; not an official Kuaishou emoji set.",
+      "source": "curated-zh",
+      "canonicalCategory": "daily",
+      "categories": {
+        "daily": ["smile", "sun_with_face", "coffee", "rice", "house"],
+        "live": ["video_camera", "microphone", "gift", "trophy", "fire"],
+        "reactions": ["joy", "ok_hand", "heart", "sob", "astonished"]
+      },
+      "aliases": {
+        "kuaishou": "sun_with_face",
+        "live": "video_camera",
+        "gift": "gift",
+        "follow": "plus",
+        "like": "heart"
+      }
+    },
+    {
+      "id": "xiaohongshu",
+      "label": "小红书",
+      "note": "非官方种草/穿搭/美食 Unicode 表情分类；不代表小红书官方表情。Unofficial lifestyle/fashion/food Unicode grouping; not an official Xiaohongshu emoji set.",
+      "source": "curated-zh",
+      "canonicalCategory": "captions",
+      "categories": {
+        "captions": ["sparkles", "heart", "camera_with_flash", "memo", "bookmark"],
+        "aesthetic": ["white_heart", "cherry_blossom", "herb", "coffee", "cake"],
+        "shopping": ["shopping_cart", "gift", "moneybag", "trophy", "star"]
+      },
+      "aliases": {
+        "xhs": "sparkles",
+        "xiaohongshu": "red_heart",
+        "plant": "herb",
+        "review": "memo",
+        "save": "bookmark",
+        "outfit": "shirt",
+        "food": "pizza"
+      }
+    },
+    {
+      "id": "wechat",
+      "label": "微信",
+      "note": "非官方聊天/红包/状态 Unicode 表情分类；微信自带表情贴图与表情商店不在本项目中。Unofficial chat/red-packet/status Unicode grouping; WeChat sticker packs are not included.",
+      "source": "curated-zh",
+      "canonicalCategory": "chat",
+      "categories": {
+        "chat": ["smile", "joy", "wave", "ok_hand", "speech_balloon"],
+        "red_packet": ["gift", "moneybag", "dollar", "100", "tada"],
+        "status": ["coffee", "sleeping", "airplane", "beach_umbrella", "heart"]
+      },
+      "aliases": {
+        "wechat": "speech_balloon",
+        "redpacket": "gift",
+        "hongbao": "gift",
+        "moments": "camera",
+        "chat": "speech_balloon",
+        "thanks": "pray"
+      }
+    },
+    {
+      "id": "weibo",
+      "label": "微博",
+      "note": "非官方话题/转发/热搜 Unicode 表情分类；不代表微博官方表情。Unofficial topic/repost/trending Unicode grouping; not an official Weibo emoji set.",
+      "source": "curated-zh",
+      "canonicalCategory": "social",
+      "categories": {
+        "trending": ["fire", "100", "eyes", "trophy", "mega"],
+        "social": ["speech_balloon", "repeat", "heart", "hash", "globe_with_meridians"],
+        "reactions": ["joy", "sob", "astonished", "angry_face", "ok_hand"]
+      },
+      "aliases": {
+        "weibo": "speech_balloon",
+        "topic": "hash",
+        "repost": "repeat",
+        "hotsearch": "fire",
+        "follow": "plus",
+        "like": "heart"
+      }
+    },
+    {
+      "id": "bilibili",
+      "label": "哔哩哔哩",
+      "note": "非官方弹幕/投币/追番 Unicode 表情分类；B 站官方小电视与会员表情贴图不在本项目中。Unofficial danmaku/coin/anime Unicode grouping; official Bilibili stickers are not included.",
+      "source": "curated-zh",
+      "canonicalCategory": "chat",
+      "categories": {
+        "danmaku": ["speech_balloon", "joy", "sob", "fire", "eyes"],
+        "support": ["coin", "star", "trophy", "heart", "clap"],
+        "anime": ["tv", "film_projector", "sparkles", "artist_palette", "dizzy"]
+      },
+      "aliases": {
+        "bili": "tv",
+        "bilibili": "tv",
+        "danmaku": "speech_balloon",
+        "coin": "coin",
+        "favorite": "star",
+        "anime": "tv",
+        "up": "arrow_up"
+      }
+    },
+    {
+      "id": "qq",
+      "label": "QQ",
+      "note": "非官方聊天/QQ 秀/群管理 Unicode 表情分类；QQ 原创黄脸表情贴图不在本项目中。Unofficial chat/avatar/group-management Unicode grouping; QQ's original sticker packs are not included.",
+      "source": "curated-zh",
+      "canonicalCategory": "chat",
+      "categories": {
+        "chat": ["smile", "joy", "wave", "ok_hand", "heart"],
+        "group": ["crown", "star", "shield", "warning", "hammer"],
+        "status": ["green_circle", "sleeping", "coffee", "musical_note", "game_die"]
+      },
+      "aliases": {
+        "qq": "smile",
+        "qzone": "camera",
+        "group": "busts_in_silhouette",
+        "online": "green_circle",
+        "away": "yellow_circle",
+        "busy": "red_circle"
+      }
+    },
+    {
+      "id": "taobao",
+      "label": "淘宝",
+      "note": "非官方购物/评价/物流 Unicode 表情分类；不代表淘宝官方表情。Unofficial shopping/review/shipping Unicode grouping; not an official Taobao emoji set.",
+      "source": "curated-zh",
+      "canonicalCategory": "shopping",
+      "categories": {
+        "shopping": ["shopping_cart", "shopping_cart", "gift", "moneybag", "star"],
+        "reviews": ["heart", "fire", "thumbsup", "camera", "memo"],
+        "shipping": ["package", "airplane", "truck", "check_mark", "hourglass"]
+      },
+      "aliases": {
+        "taobao": "shopping_cart",
+        "buy": "shopping_cart",
+        "cart": "shopping_cart",
+        "order": "memo",
+        "review": "star",
+        "refund": "back"
+      }
+    },
+    {
+      "id": "pinduoduo",
+      "label": "拼多多",
+      "note": "非官方拼团/优惠/评价 Unicode 表情分类；不代表拼多多官方表情。Unofficial group-buy/discount/review Unicode grouping; not an official Pinduoduo emoji set.",
+      "source": "curated-zh",
+      "canonicalCategory": "shopping",
+      "categories": {
+        "shopping": ["shopping_cart", "gift", "moneybag", "100", "fire"],
+        "group_buy": ["busts_in_silhouette", "handshake", "tada", "star", "trophy"],
+        "reviews": ["smile", "ok_hand", "heart", "camera", "memo"]
+      },
+      "aliases": {
+        "pdd": "shopping_cart",
+        "groupbuy": "busts_in_silhouette",
+        "deal": "moneybag",
+        "coupon": "ticket",
+        "discount": "100"
+      }
+    },
+    {
+      "id": "meituan",
+      "label": "美团",
+      "note": "非官方外卖/到店/评价 Unicode 表情分类；不代表美团官方表情。Unofficial food-delivery/local-services Unicode grouping; not an official Meituan emoji set.",
+      "source": "curated-zh",
+      "canonicalCategory": "daily",
+      "categories": {
+        "delivery": ["bicycle", "scooter", "package", "hourglass", "phone"],
+        "food": ["pizza", "hamburger", "coffee", "cake", "rice"],
+        "reviews": ["star", "heart", "smile", "ok_hand", "memo"]
+      },
+      "aliases": {
+        "meituan": "bicycle",
+        "takeout": "package",
+        "delivery": "scooter",
+        "food": "pizza",
+        "coupon": "ticket"
       }
     },
     {
       "id": "instagram",
       "label": "Instagram",
-      "note": "Curated caption and story categories. Instagram does not publish a public shortcode registry.",
+      "note": "非官方文案/故事/审美分类；Instagram 不公开官方 shortcode 表。Curated caption, story and aesthetic categories; Instagram does not publish a public shortcode registry.",
       "source": "curated",
       "canonicalCategory": "captions",
       "categories": {
-        "captions": ["sparkles", "heart", "fire", "camera_with_flash", "sun_with_face"],
+        "captions": ["sparkles", "heart", "fire", "camera_with_flash", "sun_with_face", "pizza", "snowman"],
         "aesthetic": ["white_heart", "black_heart", "herb", "cherry_blossom", "sparkles"],
         "stories": ["camera", "camera_with_flash", "video_camera", "microphone", "loudspeaker"]
       },
@@ -66,7 +302,7 @@
       "source": "github-api",
       "canonicalCategory": "reactions",
       "categories": {
-        "reactions": ["+1", "-1", "heart", "tada", "eyes", "laugh", "confused", "rocket"],
+        "reactions": ["+1", "-1", "heart", "tada", "eyes", "joy", "confused", "rocket"],
         "development": ["bug", "wrench", "gear", "computer", "rocket", "sparkles"]
       },
       "aliases": {
@@ -101,19 +337,20 @@
     {
       "id": "slack",
       "label": "Slack",
-      "note": "Uses the shared colon-shortcode convention. Workspace custom emoji are not included.",
+      "note": "Uses the shared colon-shortcode convention derived from iamcal/emoji-data. Workspace custom emoji are not included.",
       "source": "curated",
       "canonicalCategory": "reactions",
       "categories": {
-        "reactions": ["+1", "eyes", "tada", "heart", "laugh", "facepunch"],
-        "status": ["green_circle", "yellow_circle", "red_circle", "calendar", "memo"]
+        "reactions": ["+1", "eyes", "tada", "heart", "joy", "facepunch"],
+        "status": ["green_circle", "yellow_circle", "red_circle", "calendar", "memo", "sparkles"]
       },
       "aliases": {
         "+1": "+1",
         "eyes": "eyes",
         "tada": "tada",
         "facepunch": "facepunch",
-        "memo": "memo"
+        "memo": "memo",
+        "sparkles": "sparkles"
       }
     },
     {
@@ -136,23 +373,26 @@
     {
       "id": "telegram",
       "label": "Telegram",
-      "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+      "note": "Curated aliases over Unicode emoji; animated emoji and custom stickers are not bundled.",
       "source": "curated",
       "canonicalCategory": "reactions",
       "categories": {
         "reactions": ["+1", "heart", "fire", "joy", "sob", "eyes"],
+        "interactive": ["party_popper", "balloon", "thumbsup", "poop", "fireworks", "fire"],
         "communication": ["email", "phone", "speech_balloon", "megaphone", "pencil"]
       },
       "aliases": {
         "message": "speech_balloon",
         "call": "phone",
-        "mail": "email"
+        "mail": "email",
+        "interactive": "party_popper",
+        "fireworks": "fireworks"
       }
     },
     {
       "id": "twitter",
       "label": "X / Twitter",
-      "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+      "note": "Curated aliases over Unicode emoji; Twemoji is an open-source design set and no proprietary artwork is bundled.",
       "source": "curated",
       "canonicalCategory": "reactions",
       "categories": {
@@ -168,11 +408,11 @@
     {
       "id": "facebook",
       "label": "Facebook",
-      "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+      "note": "Curated approximations of publicly documented Facebook reactions; animated proprietary reaction artwork is not bundled.",
       "source": "curated",
       "canonicalCategory": "reactions",
       "categories": {
-        "reactions": ["+1", "heart", "haha", "wow", "sad", "angry"],
+        "reactions": ["+1", "heart", "joy", "astonished", "sob", "angry", "hugging_face"],
         "sharing": ["speech_balloon", "thumbsup", "camera", "video_camera"]
       },
       "aliases": {
@@ -180,24 +420,166 @@
         "wow": "astonished",
         "sad": "sob",
         "angry": "angry_face",
-        "thumbsup": "+1"
+        "thumbsup": "+1",
+        "care": "hugging_face"
+      }
+    },
+    {
+      "id": "reddit",
+      "label": "Reddit",
+      "note": "非官方社区/投票/梗图 Unicode 表情分类；不代表 Reddit 官方表情。Unofficial community/voting/meme Unicode grouping; not an official Reddit emoji set.",
+      "source": "curated",
+      "canonicalCategory": "community",
+      "categories": {
+        "voting": ["arrow_up", "arrow_down", "100", "fire", "trophy"],
+        "community": ["speech_balloon", "busts_in_silhouette", "hash", "globe_with_meridians", "memo"],
+        "memes": ["joy", "clown_face", "astonished", "skull", "sparkles"]
+      },
+      "aliases": {
+        "reddit": "speech_balloon",
+        "upvote": "arrow_up",
+        "downvote": "arrow_down",
+        "subreddit": "hash",
+        "karma": "trophy",
+        "meme": "joy"
+      }
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "note": "非官方职场/求职/动态 Unicode 表情分类；不代表 LinkedIn 官方表情。Unofficial professional/job/post Unicode grouping; not an official LinkedIn emoji set.",
+      "source": "curated",
+      "canonicalCategory": "work",
+      "categories": {
+        "work": ["briefcase", "computer", "memo", "calendar", "chart_with_upwards_trend"],
+        "career": ["trophy", "star", "rocket", "bulb", "handshake"],
+        "posts": ["speech_balloon", "eyes", "thumbsup", "arrow_forward", "sparkles"]
+      },
+      "aliases": {
+        "linkedin": "briefcase",
+        "job": "briefcase",
+        "career": "chart_with_upwards_trend",
+        "network": "handshake",
+        "hire": "trophy",
+        "inspire": "bulb"
+      }
+    },
+    {
+      "id": "youtube",
+      "label": "YouTube",
+      "note": "非官方视频/直播/订阅 Unicode 表情分类；不代表 YouTube 官方表情。Unofficial video/live/subscription Unicode grouping; not an official YouTube emoji set.",
+      "source": "curated",
+      "canonicalCategory": "video",
+      "categories": {
+        "video": ["video_camera", "play_button", "tv", "film_projector", "clapper_board"],
+        "live": ["red_circle", "microphone", "fire", "eyes", "trophy"],
+        "creator": ["bell", "heart", "bell", "sparkles", "camera"]
+      },
+      "aliases": {
+        "youtube": "video_camera",
+        "video": "video_camera",
+        "live": "red_circle",
+        "subscribe": "bell",
+        "like": "heart",
+        "shorts": "film_projector"
+      }
+    },
+    {
+      "id": "threads",
+      "label": "Threads",
+      "note": "非官方轻社交/回复/发帖 Unicode 表情分类；不代表 Threads 官方表情。Unofficial casual-social/reply/post Unicode grouping; not an official Threads emoji set.",
+      "source": "curated",
+      "canonicalCategory": "social",
+      "categories": {
+        "social": ["speech_balloon", "heart", "eyes", "repeat", "hash"],
+        "replies": ["joy", "sob", "astonished", "ok_hand", "sparkles"],
+        "posting": ["memo", "camera", "globe_with_meridians", "thread", "arrow_forward"]
+      },
+      "aliases": {
+        "threads": "thread",
+        "thread": "thread",
+        "reply": "speech_balloon",
+        "post": "memo",
+        "quote": "arrow_forward",
+        "follow": "plus"
+      }
+    },
+    {
+      "id": "pinterest",
+      "label": "Pinterest",
+      "note": "非官方灵感/收藏/手作 Unicode 表情分类；不代表 Pinterest 官方表情。Unofficial inspiration/save/DIY Unicode grouping; not an official Pinterest emoji set.",
+      "source": "curated",
+      "canonicalCategory": "discovery",
+      "categories": {
+        "discovery": ["sparkles", "eyes", "bulb", "camera", "star"],
+        "boards": ["bookmark", "pushpin", "memo", "heart", "trophy"],
+        "diy": ["scissors", "thread", "artist_palette", "gift", "house"]
+      },
+      "aliases": {
+        "pinterest": "pushpin",
+        "pin": "pushpin",
+        "board": "bookmark",
+        "inspiration": "bulb",
+        "diy": "scissors",
+        "save": "bookmark"
       }
     },
     {
       "id": "twitch",
       "label": "Twitch",
-      "note": "Channel/global emotes require the official authenticated Twitch API and are not bundled.",
+      "note": "Channel/global emotes require the official authenticated Twitch API and are not bundled; only Unicode approximations are grouped here.",
       "source": "curated",
       "canonicalCategory": "chat",
       "categories": {
-        "chat": ["smile", "joy", "heart", "fire", "eyes", "hype"],
+        "chat": ["smile", "joy", "heart", "fire", "eyes", "fire", "smirk"],
         "streaming": ["video_camera", "microphone", "tv", "game_die", "trophy"]
       },
       "aliases": {
         "hype": "fire",
         "pog": "astonished",
         "gg": "ok_hand",
-        "stream": "video_camera"
+        "stream": "video_camera",
+        "kappa": "smirk",
+        "lul": "joy"
+      }
+    },
+    {
+      "id": "snapchat",
+      "label": "Snapchat",
+      "note": "非官方好友状态/Streak 表情含义分类；基于公开资料，不代表 Snapchat 官方表情。Unofficial friend-status/streak meaning grouping from public documentation; not an official Snapchat emoji set.",
+      "source": "curated",
+      "canonicalCategory": "status",
+      "categories": {
+        "streak": ["fire", "100", "hourglass", "sparkles", "birthday"],
+        "friends": ["yellow_heart", "red_heart", "two_hearts", "baby", "smiling_face_with_sunglasses"],
+        "meanings": ["grimacing_face", "smirk", "smile", "trophy", "sagittarius"]
+      },
+      "aliases": {
+        "streak": "fire",
+        "bestfriend": "yellow_heart",
+        "replay": "repeat",
+        "snapstreak": "fire",
+        "hourglass": "hourglass"
+      }
+    },
+    {
+      "id": "native",
+      "label": "原生平台 / Native platforms",
+      "note": "按公开资料整理的 Apple、Google、Samsung、Microsoft 等平台设计分类；仅作元数据分组，不捆绑或承诺像素级一致的平台图片。Unofficial grouping for Apple/Google/Samsung/Microsoft platform designs; no bundled artwork and no pixel-identical rendering claims.",
+      "source": "curated",
+      "canonicalCategory": "platforms",
+      "categories": {
+        "platforms": ["apple", "globe_with_meridians", "mobile_phone", "computer", "smiley", "hatching_chick", "wave", "globe_with_meridians"],
+        "designs": ["smile", "heart", "fire", "party_popper", "rocket"]
+      },
+      "aliases": {
+        "apple": "apple",
+        "google": "globe_with_meridians",
+        "android": "robot",
+        "samsung": "mobile_phone",
+        "microsoft": "computer",
+        "joypixels": "globe_with_meridians",
+        "native": "sparkles"
       }
     }
   ]
