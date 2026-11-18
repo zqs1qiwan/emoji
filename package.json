@@ -60,9 +60,10 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "emoji-kit": "./dist/cli.js"
+    "emoji-kit": "bin/emoji-kit.mjs"
   },
   "files": [
+    "bin",
     "dist",
     "README.md",
     "LICENSE",

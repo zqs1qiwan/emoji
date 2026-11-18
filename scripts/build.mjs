@@ -54,7 +54,7 @@ for (const name of ['index', 'core', 'data', 'react']) shim(`${name}.cjs`, `${na
 // The CLI is authored as plain ESM to avoid requiring Node typings in the
 // browser-safe TypeScript build; copy its source verbatim.
 fs.copyFileSync(path.join(root, 'scripts/cli-template.mjs'), path.join(dist, 'cli.js'));
-try { fs.chmodSync(path.join(dist, 'cli.js'), 0o755); } catch { /* Windows */ }
+try { fs.chmodSync(path.join(dist, 'cli.js'), 0o755); } catch { /* Windows: set the executable bit in git with update-index --chmod=+x src/cli-template.mjs */ }
 
 // TypeScript copies imported JSON into dist/data/generated. Keep those files as
 // the only runtime copy and expose top-level aliases for the CLI and consumers.
