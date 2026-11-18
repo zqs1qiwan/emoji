@@ -1,5 +1,7 @@
 import ts from 'typescript';
+import { stageGeneratedData, packageRoot } from './stage-data.mjs';
 
+stageGeneratedData(packageRoot);
 const configPath = new URL('../tsconfig.json', import.meta.url).pathname.replace(/^\/(\w:)/, '$1');
 const configFile = ts.readConfigFile(configPath, ts.sys.readFile);
 if (configFile.error) throw new Error(ts.flattenDiagnosticMessageText(configFile.error.messageText, '\n'));

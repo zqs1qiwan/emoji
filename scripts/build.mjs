@@ -1,19 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import ts from 'typescript';
+import { generatedFiles, stageGeneratedData, packageRoot } from './stage-data.mjs';
 
-const here = path.dirname(fileURLToPath(import.meta.url));
-const root = path.dirname(here);
+const root = packageRoot;
 const dist = path.join(root, 'dist');
-const generatedFiles = ['emojis.json', 'aliases.json', 'apps.json', 'assets.json', 'meta.json', 'checksums.json'];
-for (const name of generatedFiles) {
-  const source = path.join(root, 'data/generated', name);
-  const target = path.join(root, 'src/data/generated', name);
-  fs.mkdirSync(path.dirname(target), { recursive: true });
-  fs.copyFileSync(source, target);
-}
-fs.writeFileSync(path.join(root, 'src/data/generated/.gitignore'), '*\n!.gitignore\n');
+stageGeneratedData(root);
 fs.rmSync(dist, { recursive: true, force: true });
 for (const name of ['dist', 'data/generated']) fs.mkdirSync(path.join(root, name), { recursive: true });
 
