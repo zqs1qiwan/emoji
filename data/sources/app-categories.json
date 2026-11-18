@@ -1,0 +1,204 @@
+{
+  "apps": [
+    {
+      "id": "tiktok",
+      "label": "TikTok",
+      "note": "Unofficial curated mapping of documented TikTok bracket codes and common caption emojis. Not affiliated with TikTok.",
+      "source": "curated",
+      "canonicalCategory": "trending",
+      "categories": {
+        "trending": ["fire", "heart", "sparkles", "sob", "100", "eyes"],
+        "reactions": ["joy", "smile", "cry", "heart_eyes", "partying_face", "clown_face"],
+        "love": ["heart", "heart_eyes", "two_hearts", "sparkling_heart", "revolving_hearts"]
+      },
+      "aliases": {
+        "fire": "fire",
+        "loveface": "heart_eyes",
+        "smile": "smile",
+        "happy": "smile",
+        "angry": "angry_face",
+        "cry": "sob",
+        "crying": "sob",
+        "embarrassed": "awkward",
+        "surprised": "astonished",
+        "wronged": "pleading_face",
+        "shout": "loud_cry",
+        "flushed": "flushed",
+        "yummy": "yum",
+        "cool": "sunglasses",
+        "cute": "smiling_face_with_heart-eyes",
+        "joyful": "joy",
+        "astonish": "astonished",
+        "stun": "dizzy_face",
+        "speechless": "zipper_mouth_face",
+        "sulk": "pouting_face",
+        "nap": "sleeping",
+        "100": "100",
+        "heart": "heart"
+      }
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "note": "Curated caption and story categories. Instagram does not publish a public shortcode registry.",
+      "source": "curated",
+      "canonicalCategory": "captions",
+      "categories": {
+        "captions": ["sparkles", "heart", "fire", "camera_with_flash", "sun_with_face"],
+        "aesthetic": ["white_heart", "black_heart", "herb", "cherry_blossom", "sparkles"],
+        "stories": ["camera", "camera_with_flash", "video_camera", "microphone", "loudspeaker"]
+      },
+      "aliases": {
+        "aesthetic": "sparkles",
+        "vibe": "sparkles",
+        "photo": "camera",
+        "story": "camera_with_flash",
+        "like": "heart",
+        "love": "heart",
+        "flower": "cherry_blossom",
+        "sad": "sob"
+      }
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "note": "Shortcodes from a pinned GitHub emojis API / gemoji snapshot; image URLs are referenced, never bundled.",
+      "source": "github-api",
+      "canonicalCategory": "reactions",
+      "categories": {
+        "reactions": ["+1", "-1", "heart", "tada", "eyes", "laugh", "confused", "rocket"],
+        "development": ["bug", "wrench", "gear", "computer", "rocket", "sparkles"]
+      },
+      "aliases": {
+        "+1": "+1",
+        "-1": "-1",
+        "tada": "tada",
+        "eyes": "eyes",
+        "rocket": "rocket",
+        "bug": "bug",
+        "ship": "rocket"
+      }
+    },
+    {
+      "id": "discord",
+      "label": "Discord",
+      "note": "Unicode aliases follow the common colon-shortcode convention. Guild-specific custom emoji are not included.",
+      "source": "curated",
+      "canonicalCategory": "reactions",
+      "categories": {
+        "reactions": ["joy", "sob", "fire", "heart", "100", "thinking"],
+        "moderation": ["no_entry_sign", "warning", "hammer", "mute", "zipper_mouth_face"]
+      },
+      "aliases": {
+        "joy": "joy",
+        "sob": "sob",
+        "fire": "fire",
+        "100": "100",
+        "thinking": "thinking_face",
+        "mute": "zipper_mouth_face"
+      }
+    },
+    {
+      "id": "slack",
+      "label": "Slack",
+      "note": "Uses the shared colon-shortcode convention. Workspace custom emoji are not included.",
+      "source": "curated",
+      "canonicalCategory": "reactions",
+      "categories": {
+        "reactions": ["+1", "eyes", "tada", "heart", "laugh", "facepunch"],
+        "status": ["green_circle", "yellow_circle", "red_circle", "calendar", "memo"]
+      },
+      "aliases": {
+        "+1": "+1",
+        "eyes": "eyes",
+        "tada": "tada",
+        "facepunch": "facepunch",
+        "memo": "memo"
+      }
+    },
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp",
+      "note": "Curated aliases over Unicode emoji; WhatsApp uses the device keyboard for standard emoji.",
+      "source": "curated",
+      "canonicalCategory": "reactions",
+      "categories": {
+        "reactions": ["+1", "heart", "joy", "sob", "ok_hand", "pray"],
+        "daily": ["smile", "wave", "coffee", "pizza", "house"]
+      },
+      "aliases": {
+        "ok": "ok_hand",
+        "thanks": "pray",
+        "coffee": "hot_beverage",
+        "home": "house"
+      }
+    },
+    {
+      "id": "telegram",
+      "label": "Telegram",
+      "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+      "source": "curated",
+      "canonicalCategory": "reactions",
+      "categories": {
+        "reactions": ["+1", "heart", "fire", "joy", "sob", "eyes"],
+        "communication": ["email", "phone", "speech_balloon", "megaphone", "pencil"]
+      },
+      "aliases": {
+        "message": "speech_balloon",
+        "call": "phone",
+        "mail": "email"
+      }
+    },
+    {
+      "id": "twitter",
+      "label": "X / Twitter",
+      "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+      "source": "curated",
+      "canonicalCategory": "reactions",
+      "categories": {
+        "reactions": ["heart", "fire", "joy", "sob", "rocket", "eyes"],
+        "social": ["speech_balloon", "mega", "hash", "bird", "globe_with_meridians"]
+      },
+      "aliases": {
+        "retweet": "repeat",
+        "like": "heart",
+        "share": "arrow_forward"
+      }
+    },
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+      "source": "curated",
+      "canonicalCategory": "reactions",
+      "categories": {
+        "reactions": ["+1", "heart", "haha", "wow", "sad", "angry"],
+        "sharing": ["speech_balloon", "thumbsup", "camera", "video_camera"]
+      },
+      "aliases": {
+        "haha": "joy",
+        "wow": "astonished",
+        "sad": "sob",
+        "angry": "angry_face",
+        "thumbsup": "+1"
+      }
+    },
+    {
+      "id": "twitch",
+      "label": "Twitch",
+      "note": "Channel/global emotes require the official authenticated Twitch API and are not bundled.",
+      "source": "curated",
+      "canonicalCategory": "chat",
+      "categories": {
+        "chat": ["smile", "joy", "heart", "fire", "eyes", "hype"],
+        "streaming": ["video_camera", "microphone", "tv", "game_die", "trophy"]
+      },
+      "aliases": {
+        "hype": "fire",
+        "pog": "astonished",
+        "gg": "ok_hand",
+        "stream": "video_camera"
+      }
+    }
+  ]
+}

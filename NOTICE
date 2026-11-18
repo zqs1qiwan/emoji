@@ -1,0 +1,23 @@
+# NOTICE
+
+emoji-kit is licensed under the [MIT License](LICENSE). This file records third-party data notices and disclaimers that apply to the bundled dataset.
+
+## Third-party data sources
+
+The generated dataset is derived from the following public sources. Exact pinned versions, URLs, and sha256 checksums are recorded in `data/sources/sources.json` and in the generated metadata.
+
+- **Unicode emoji data and CLDR annotations** — Unicode / Emoji 18.0 and CLDR 49 data. © Unicode, Inc. Licensed under the Unicode Terms of Use / Unicode-3.0 license: https://www.unicode.org/license.txt . Product names and annotations are used as data only.
+- **iamcal emoji-data** — https://github.com/iamcal/emoji-data . MIT license.
+- **Emojibase** (English dataset and shortcode sets: CLDR, Emojibase, GitHub, iamcal) — https://github.com/milesj/emojibase . MIT license.
+- **GitHub gemoji database** — https://github.com/github/gemoji . MIT license.
+- **GitHub emojis API snapshot** — https://api.github.com/emojis . Used only as a pinned URL index for the GitHub category; subject to the GitHub API Terms of Service: https://docs.github.com/en/site-policy/github-terms/github-api-terms-of-service . No image data is bundled from this source.
+
+The full license texts for cached sources are kept in the repository's development cache and are not required at runtime. See [data pipeline](docs/data-pipeline.md) for how these inputs are normalized into generated JSON.
+
+## App-category disclaimer
+
+The app categories (`tiktok`, `instagram`, `github`, `discord`, `slack`, `whatsapp`, `telegram`, `twitter`, `facebook`, `twitch`) are **curated alias and grouping overlays over Unicode base data**. They are not official datasets published by those companies, are not guaranteed complete or current, and are provided for developer convenience only.
+
+emoji-kit is not affiliated with, endorsed by, or sponsored by TikTok, Instagram, GitHub, Discord, Slack, WhatsApp, Telegram, X / Twitter, Facebook, Twitch, or any other service named in a category. All trademarks and product names belong to their respective owners.
+
+No proprietary or vendor artwork is bundled. Native platform emoji rendering uses Unicode characters supplied by the operating system or browser; pixel-identical rendering with any platform or app is not promised. Asset URLs, where present in generated data, are HTTPS references only and are exposed to callers only when `allowRemoteAssets` is explicitly enabled.

@@ -1,0 +1,87 @@
+{
+  "name": "emoji-kit",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A fast, typed, app-aware emoji toolkit for JavaScript and TypeScript developers.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zqs1qiwan/emoji.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zqs1qiwan/emoji/issues"
+  },
+  "homepage": "https://github.com/zqs1qiwan/emoji#readme",
+  "keywords": [
+    "emoji",
+    "unicode",
+    "emoji-data",
+    "shortcode",
+    "tiktok",
+    "instagram",
+    "typescript"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./data": {
+      "types": "./dist/data.d.ts",
+      "import": "./dist/data.js",
+      "require": "./dist/data.cjs"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "import": "./dist/core.js",
+      "require": "./dist/core.cjs"
+    },
+    "./apps": {
+      "types": "./dist/data.d.ts",
+      "import": "./dist/data.js",
+      "require": "./dist/data.cjs"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    },
+    "./cli": {
+      "import": "./dist/cli.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "emoji-kit": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node tests/core.test.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "check:public": "node scripts/check-public-hygiene.mjs",
+    "data:build": "node scripts/build-data.mjs",
+    "data:check": "node scripts/check-data.mjs",
+    "prepublishOnly": "npm run check && npm run check:public"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}

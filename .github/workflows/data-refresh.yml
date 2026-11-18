@@ -1,0 +1,28 @@
+name: Data refresh
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify-generated-data:
+    name: Verify generated data is committed
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify checked-in data
+        run: npm run data:check
+
+      # Raw pinned source snapshots are kept out of the public repository. To
+      # refresh data, fetch the pinned sources locally, run npm run data:build,
+      # review the generated diff, and commit data/generated with checksums.

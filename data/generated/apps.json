@@ -1,0 +1,337 @@
+{
+  "tiktok": {
+    "id": "tiktok",
+    "label": "TikTok",
+    "note": "Unofficial curated mapping of documented TikTok bracket codes and common caption emojis. Not affiliated with TikTok.",
+    "source": "curated",
+    "canonicalCategory": "trending",
+    "categories": {
+      "trending": [
+        "1F525",
+        "2764",
+        "2728",
+        "1F62D",
+        "1F4AF",
+        "1F440"
+      ],
+      "reactions": [
+        "1F602",
+        "1F604",
+        "1F622",
+        "1F60D",
+        "1F973",
+        "1F921"
+      ],
+      "love": [
+        "2764",
+        "1F60D",
+        "1F495",
+        "1F496",
+        "1F49E"
+      ]
+    },
+    "aliases": {
+      "100": "1F4AF",
+      "fire": "1F525",
+      "loveface": "1F60D",
+      "smile": "1F604",
+      "happy": "1F604",
+      "angry": "1F620",
+      "cry": "1F62D",
+      "crying": "1F62D",
+      "surprised": "1F632",
+      "wronged": "1F97A",
+      "flushed": "1F633",
+      "yummy": "1F60B",
+      "cool": "1F60E",
+      "joyful": "1F602",
+      "astonish": "1F632",
+      "stun": "1F635",
+      "speechless": "1F910",
+      "sulk": "1F621",
+      "nap": "1F634",
+      "heart": "2764"
+    }
+  },
+  "instagram": {
+    "id": "instagram",
+    "label": "Instagram",
+    "note": "Curated caption and story categories. Instagram does not publish a public shortcode registry.",
+    "source": "curated",
+    "canonicalCategory": "captions",
+    "categories": {
+      "captions": [
+        "2728",
+        "2764",
+        "1F525",
+        "1F4F8",
+        "1F31E"
+      ],
+      "aesthetic": [
+        "1F90D",
+        "1F5A4",
+        "1F33F",
+        "1F338",
+        "2728"
+      ],
+      "stories": [
+        "1F4F7",
+        "1F4F8",
+        "1F4F9",
+        "1F3A4",
+        "1F4E2"
+      ]
+    },
+    "aliases": {
+      "aesthetic": "2728",
+      "vibe": "2728",
+      "photo": "1F4F7",
+      "story": "1F4F8",
+      "like": "2764",
+      "love": "2764",
+      "flower": "1F338",
+      "sad": "1F62D"
+    }
+  },
+  "github": {
+    "id": "github",
+    "label": "GitHub",
+    "note": "Shortcodes from a pinned GitHub emojis API / gemoji snapshot; image URLs are referenced, never bundled.",
+    "source": "github-api",
+    "canonicalCategory": "reactions",
+    "categories": {
+      "reactions": [
+        "1F44D",
+        "1F44E",
+        "2764",
+        "1F389",
+        "1F440",
+        "1F615",
+        "1F680"
+      ],
+      "development": [
+        "1F41B",
+        "1F527",
+        "2699",
+        "1F4BB",
+        "1F680",
+        "2728"
+      ]
+    },
+    "aliases": {
+      "+1": "1F44D",
+      "-1": "1F44E",
+      "tada": "1F389",
+      "eyes": "1F440",
+      "rocket": "1F680",
+      "bug": "1F41B",
+      "ship": "1F680"
+    }
+  },
+  "discord": {
+    "id": "discord",
+    "label": "Discord",
+    "note": "Unicode aliases follow the common colon-shortcode convention. Guild-specific custom emoji are not included.",
+    "source": "curated",
+    "canonicalCategory": "reactions",
+    "categories": {
+      "reactions": [
+        "1F602",
+        "1F62D",
+        "1F525",
+        "2764",
+        "1F4AF",
+        "1F914"
+      ],
+      "moderation": [
+        "1F6AB",
+        "26A0",
+        "1F528",
+        "1F507",
+        "1F910"
+      ]
+    },
+    "aliases": {
+      "100": "1F4AF",
+      "joy": "1F602",
+      "sob": "1F62D",
+      "fire": "1F525",
+      "thinking": "1F914",
+      "mute": "1F910"
+    }
+  },
+  "slack": {
+    "id": "slack",
+    "label": "Slack",
+    "note": "Uses the shared colon-shortcode convention. Workspace custom emoji are not included.",
+    "source": "curated",
+    "canonicalCategory": "reactions",
+    "categories": {
+      "reactions": [
+        "1F44D",
+        "1F440",
+        "1F389",
+        "2764",
+        "1F44A"
+      ],
+      "status": [
+        "1F7E2",
+        "1F7E1",
+        "1F534",
+        "1F4C5",
+        "1F4DD"
+      ]
+    },
+    "aliases": {
+      "+1": "1F44D",
+      "eyes": "1F440",
+      "tada": "1F389",
+      "facepunch": "1F44A",
+      "memo": "1F4DD"
+    }
+  },
+  "whatsapp": {
+    "id": "whatsapp",
+    "label": "WhatsApp",
+    "note": "Curated aliases over Unicode emoji; WhatsApp uses the device keyboard for standard emoji.",
+    "source": "curated",
+    "canonicalCategory": "reactions",
+    "categories": {
+      "reactions": [
+        "1F44D",
+        "2764",
+        "1F602",
+        "1F62D",
+        "1F44C",
+        "1F64F"
+      ],
+      "daily": [
+        "1F604",
+        "1F44B",
+        "2615",
+        "1F355",
+        "1F3E0"
+      ]
+    },
+    "aliases": {
+      "ok": "1F44C",
+      "thanks": "1F64F",
+      "coffee": "2615",
+      "home": "1F3E0"
+    }
+  },
+  "telegram": {
+    "id": "telegram",
+    "label": "Telegram",
+    "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+    "source": "curated",
+    "canonicalCategory": "reactions",
+    "categories": {
+      "reactions": [
+        "1F44D",
+        "2764",
+        "1F525",
+        "1F602",
+        "1F62D",
+        "1F440"
+      ],
+      "communication": [
+        "2709",
+        "260E",
+        "1F4AC",
+        "1F4E3",
+        "270F"
+      ]
+    },
+    "aliases": {
+      "message": "1F4AC",
+      "call": "260E",
+      "mail": "2709"
+    }
+  },
+  "twitter": {
+    "id": "twitter",
+    "label": "X / Twitter",
+    "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+    "source": "curated",
+    "canonicalCategory": "reactions",
+    "categories": {
+      "reactions": [
+        "2764",
+        "1F525",
+        "1F602",
+        "1F62D",
+        "1F680",
+        "1F440"
+      ],
+      "social": [
+        "1F4AC",
+        "1F4E3",
+        "0023-20E3",
+        "1F426",
+        "1F310"
+      ]
+    },
+    "aliases": {
+      "retweet": "1F501",
+      "like": "2764",
+      "share": "25B6"
+    }
+  },
+  "facebook": {
+    "id": "facebook",
+    "label": "Facebook",
+    "note": "Curated aliases over Unicode emoji; no official public shortcode registry.",
+    "source": "curated",
+    "canonicalCategory": "reactions",
+    "categories": {
+      "reactions": [
+        "1F44D",
+        "2764",
+        "1F620"
+      ],
+      "sharing": [
+        "1F4AC",
+        "1F44D",
+        "1F4F7",
+        "1F4F9"
+      ]
+    },
+    "aliases": {
+      "haha": "1F602",
+      "wow": "1F632",
+      "sad": "1F62D",
+      "angry": "1F620",
+      "thumbsup": "1F44D"
+    }
+  },
+  "twitch": {
+    "id": "twitch",
+    "label": "Twitch",
+    "note": "Channel/global emotes require the official authenticated Twitch API and are not bundled.",
+    "source": "curated",
+    "canonicalCategory": "chat",
+    "categories": {
+      "chat": [
+        "1F604",
+        "1F602",
+        "2764",
+        "1F525",
+        "1F440"
+      ],
+      "streaming": [
+        "1F4F9",
+        "1F3A4",
+        "1F4FA",
+        "1F3B2",
+        "1F3C6"
+      ]
+    },
+    "aliases": {
+      "hype": "1F525",
+      "pog": "1F632",
+      "gg": "1F44C",
+      "stream": "1F4F9"
+    }
+  }
+}

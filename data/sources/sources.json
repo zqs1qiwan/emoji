@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "unicodeVersion": "18.0",
+  "emojiVersion": "18.0",
+  "cldrVersion": "49",
+  "sources": [
+    {
+      "id": "emojibase-data",
+      "name": "Emojibase English dataset",
+      "url": "https://cdn.jsdelivr.net/npm/emojibase-data@18.0.0/en/data.json",
+      "version": "18.0.0",
+      "sha256": "f8c561877ac08c3a33c96d1c02fd064b1dfbe24ddce8b6fd243ecb346ce96913",
+      "license": "MIT"
+    },
+    {
+      "id": "emojibase-shortcodes-cldr",
+      "name": "Emojibase CLDR shortcodes",
+      "url": "https://cdn.jsdelivr.net/npm/emojibase-data@18.0.0/en/shortcodes/cldr.json",
+      "version": "18.0.0",
+      "sha256": "20220ef911f5ec4009d5e979317d7a69c940150ff73efd206558021db31e5dac",
+      "license": "MIT"
+    },
+    {
+      "id": "emojibase-shortcodes-emojibase",
+      "name": "Emojibase native shortcodes",
+      "url": "https://cdn.jsdelivr.net/npm/emojibase-data@18.0.0/en/shortcodes/emojibase.json",
+      "version": "18.0.0",
+      "sha256": "15d9dd86e5008624b629a4355fe5657d92d0032cf13dc04a327ddda5be2210c1",
+      "license": "MIT"
+    },
+    {
+      "id": "emojibase-shortcodes-github",
+      "name": "Emojibase GitHub shortcodes",
+      "url": "https://cdn.jsdelivr.net/npm/emojibase-data@18.0.0/en/shortcodes/github.json",
+      "version": "18.0.0",
+      "sha256": "d6bb7101e7bab1e52b30f4b3562da2319b484a6266352a1119f0d1ba52db23db",
+      "license": "MIT"
+    },
+    {
+      "id": "emojibase-shortcodes-iamcal",
+      "name": "Emojibase iamcal shortcodes",
+      "url": "https://cdn.jsdelivr.net/npm/emojibase-data@18.0.0/en/shortcodes/iamcal.json",
+      "version": "18.0.0",
+      "sha256": "15936541759b97092e1dc8d37f043ebec0a93105745a2c4ed7268f1388b72fb7",
+      "license": "MIT"
+    },
+    {
+      "id": "github-emojis",
+      "name": "GitHub emojis API snapshot",
+      "url": "https://api.github.com/emojis",
+      "version": "snapshot-2026-11-18",
+      "sha256": "5b6bf0e5f9b33f6bff29e9f40232863f9bb6dedbd80c46562f3338142613bc57",
+      "license": "GitHub API Terms; URL index only"
+    },
+    {
+      "id": "gemoji",
+      "name": "GitHub gemoji database",
+      "url": "https://raw.githubusercontent.com/github/gemoji/master/db/emoji.json",
+      "version": "master-snapshot-2026-11-18",
+      "sha256": "b174ae2aeb321b52f64adb9ff412f966a7f338839d780784dd15dcad702c2dd6",
+      "license": "MIT"
+    },
+    {
+      "id": "iamcal",
+      "name": "iamcal emoji-data",
+      "url": "https://raw.githubusercontent.com/iamcal/emoji-data/master/emoji.json",
+      "version": "master-snapshot-2026-11-18",
+      "sha256": "8736d721991e48c41c57acc46b65e5d32258a45e4bcdebcc6012f420f81e775d",
+      "license": "MIT"
+    }
+  ]
+}
