@@ -4,8 +4,8 @@ This document gives contributors a map of how emoji-kit is assembled. For user-f
 
 ## Layers
 
-1. **Pinned sources** — `data/sources/sources.json` lists upstream URLs, versions, sha256 hashes, and licenses. `data/sources/app-categories.json` holds curated overlays.
-2. **Build scripts** — `scripts/**` fetch (development only), validate, normalize, and merge inputs into deterministic generated JSON under `data/generated`. `checksums.json` records a sha256 for each generated file.
+1. **Pinned data sources** — `data/sources/sources.json` lists upstream URLs, versions, sha256 hashes, and licenses for raw JSON inputs. `data/sources/app-categories.json` holds curated overlays. `data/sources/resource-sources.json` separately defines the raw resource library (files under `resources/**`), pinned by commit.
+2. **Build and collection scripts** — `scripts/**` fetch (development only), validate, normalize, and merge raw JSON inputs into deterministic generated JSON under `data/generated`. `checksums.json` records a sha256 for each generated file. `scripts/collect-resources.mjs` independently downloads the pinned resource library and writes `resources/manifest.json` with hashes and provenance; that library is never imported into the runtime dataset.
 3. **Core** — `src/index.ts` builds lookup indexes (by id, character, and hex code) once per kit, resolves strings and definitions, implements search/list/render, and exposes the default callable with bound helpers. `src/core.ts` re-exports it and adds the `createKit` alias. `src/types.ts` holds shared types.
 4. **Data entry** — `src/data.ts` and `src/data-entry.ts` expose generated JSON as typed `emojis`, `aliases`, `apps`, `assets`, and `metadata` for `emoji-kit/data` and `emoji-kit/apps`.
 5. **Adapters** — `src/react.ts` wraps the core for React consumers (`useEmojiKit`, `emojiProps`). `scripts/cli-template.mjs` is the plain-ESM CLI entry built to `dist/cli.js` and exposed as the `emoji-kit` binary.
@@ -23,7 +23,7 @@ This document gives contributors a map of how emoji-kit is assembled. For user-f
 
 - The core imports checked-in JSON only: no `fetch`, no filesystem access, no timers, and no dynamic code execution.
 - Raw JSON is treated as untrusted; build scripts validate checksums and normalize keys.
-- All remote URLs are HTTPS references, and no vendor artwork is bundled.
+- All remote asset URL references are HTTPS. The npm package bundles no vendor artwork; the repository also carries a separate raw research corpus under `resources/**`, which is excluded from the npm package and never loaded by the core.
 - `npm run check:public` scans public files for local paths, caches, logs, debug artifacts, and binary files.
 
 ## Development commands

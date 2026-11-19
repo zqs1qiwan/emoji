@@ -29,6 +29,7 @@
 - **安全渲染**：`renderText()` 把 `:shortcode:` 替换为 Unicode 字符，**绝不输出 HTML**；原始 JSON 按不可信输入处理，无 `eval`，URL 仅允许 HTTPS。
 - **隐私优先**：原生平台 emoji 使用 Unicode 字符；远程资源 URL 必须通过 `allowRemoteAssets` 显式开启；不捆绑任何厂商美术资源。
 - **类型完善、可 tree-shake**：完整 TypeScript 声明，`sideEffects: false`，提供 `core`、`data`、`apps`、`react`、`cli` 子路径导出。
+- **额外原始资源库**：仓库中的 `resources/**` 单独保存 6 个固定公开来源的原始文件（Twemoji、OpenMoji、Noto Emoji、Fluent Emoji，以及社区整理的 TikTok / 抖音表情），共 15,975 个文件；按来源和 App 保留原始目录，并通过 `resources/manifest.json` 记录 commit、URL、许可证、sha256 和文件大小。该资源库不参与 npm 包，也不会混入运行时数据。
 - **确定性数据**：Unicode / Emoji 18.0、CLDR 49，1,958 个 emoji、3,983 个唯一 shortcode（4,020 条别名记录）、1,431 条资源记录、28 个 App 分类和 612 个 App 标签；由固定来源和 sha256 校验确定性重建，无时间戳。
 
 **English**
@@ -39,6 +40,7 @@
 - **Safe rendering.** `renderText()` replaces `:shortcode:` tokens with Unicode characters and **never emits HTML**. Raw JSON is treated as untrusted; no `eval`; all referenced URLs are HTTPS.
 - **Privacy-friendly by default.** Native platform emoji uses Unicode characters. Remote asset URLs are opt-in only via `allowRemoteAssets`, and no proprietary artwork is bundled.
 - **Typed and tree-shakeable.** Full TypeScript declarations, `sideEffects: false`, and focused subpath exports (`core`, `data`, `apps`, `react`, `cli`).
+- **Extra raw resource library.** The repository preserves 15,975 original files from six pinned public sources under `resources/**` (Twemoji, OpenMoji, Noto Emoji, Fluent Emoji, and community TikTok/Douyin collections). Original per-source/app structure is retained; `resources/manifest.json` records commits, URLs, licenses, sha256 hashes, and sizes. This library is excluded from the npm package and never merged into runtime data.
 - **Deterministic data.** Unicode/Emoji 18.0 and CLDR 49 data, 1,958 emojis, 3,983 unique shortcode aliases (4,020 alias records), 1,431 asset records, 28 curated app categories and 612 app tags — rebuilt from pinned sources with sha256 checksums.
 
 ## 安装与快速开始 / Install and quick start
@@ -285,6 +287,7 @@ function Badge() {
 - 来源在 `data/sources/sources.json` 中用 sha256 固定；生成文件另有校验和。可通过 `npm run data:build` 重建、通过 `npm run data:check` 校验。
 - 所有原始 JSON 按不可信输入处理；URL 仅 HTTPS；无 `eval`；`renderText()` 只返回纯文本，绝不返回 HTML。
 - 远程资源必须显式设置 `allowRemoteAssets: true`。详见 [数据管线](docs/data-pipeline.md) 与 [架构](docs/architecture.md)。
+- 仓库另有一个**原始资源库** `resources/**`，从固定公开仓库收集并按来源/App 保留目录；`resources/manifest.json` 记录来源、commit、许可证、sha256 与文件大小，可用 `node scripts/collect-resources.mjs --check` 校验。它不是运行时依赖，也不在 npm 包内；单个文件的再使用需遵守其上游许可证。
 
 **English**
 
@@ -292,6 +295,7 @@ function Badge() {
 - Sources are pinned with sha256 hashes in `data/sources/sources.json`; generated files have their own checksums. Rebuild with `npm run data:build` and verify with `npm run data:check`.
 - All raw JSON is treated as untrusted input. URLs are HTTPS-only, there is no `eval`, and `renderText()` returns plain text — never HTML.
 - Remote assets require an explicit `allowRemoteAssets: true`. See [data pipeline](docs/data-pipeline.md) and [architecture](docs/architecture.md).
+- The repository also contains a **raw resource library** under `resources/**`, collected from pinned public repositories with original per-source/app structure preserved. `resources/manifest.json` records sources, commits, licenses, sha256 hashes, and sizes; verify it with `node scripts/collect-resources.mjs --check`. It is not a runtime dependency and is excluded from the npm package; reuse of individual files must follow the applicable upstream license.
 
 ## 开发 / Development
 

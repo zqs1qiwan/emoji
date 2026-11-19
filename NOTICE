@@ -14,10 +14,23 @@ The generated dataset is derived from the following public sources. Exact pinned
 
 The full license texts for cached sources are kept in the repository's development cache and are not required at runtime. See [data pipeline](docs/data-pipeline.md) for how these inputs are normalized into generated JSON.
 
+## Raw resource library
+
+`resources/**` contains a separate, raw reference library of files downloaded from pinned public repositories. It is **not** imported by `emoji-kit/core`, is **not** included in the npm package (`package.json` `files`), and is not normalized into `data/generated/**`. Sources, fixed commit refs, local paths, upstream URLs, license notes, sha256 hashes, and byte sizes are recorded in `data/sources/resource-sources.json` and `resources/manifest.json`.
+
+- **Twemoji SVG** — https://github.com/jdecked/twemoji — CC-BY-4.0 for graphics. © Twitter and contributors. Attribution required.
+- **OpenMoji color SVG** — https://github.com/hfg-gmuend/openmoji — CC-BY-SA-4.0. © OpenMoji contributors.
+- **Noto Emoji 2D PNG** — https://github.com/googlefonts/noto-emoji — SIL Open Font License 1.1. © Google and contributors.
+- **Fluent Emoji color SVG** — https://github.com/microsoft/fluentui-emoji — MIT. © Microsoft and contributors.
+- **TikTok hidden emoji SVG (community reproduction)** — https://github.com/boqingren/tiktok-emojis — MIT declared in the repository README; no separate LICENSE file. **Not an official TikTok asset pack.**
+- **Douyin small emoji PNG (community collection)** — https://github.com/hnlyzxf/douyin-emoji — MIT. **Not an official Douyin asset pack.**
+
+License texts are saved alongside each source where available. Reuse of the raw files must follow the individual upstream license and any applicable trademark rules. App names identify the subject of a community collection, not official affiliation.
+
 ## App-category disclaimer
 
-The app categories (`tiktok`, `instagram`, `github`, `discord`, `slack`, `whatsapp`, `telegram`, `twitter`, `facebook`, `twitch`) are **curated alias and grouping overlays over Unicode base data**. They are not official datasets published by those companies, are not guaranteed complete or current, and are provided for developer convenience only.
+The app categories in `data/sources/app-categories.json` are **curated alias and grouping overlays over Unicode base data**. They are not official datasets published by those companies, are not guaranteed complete or current, and are provided for developer convenience only. The raw resource library above is kept distinct from these runtime overlays.
 
 emoji-kit is not affiliated with, endorsed by, or sponsored by TikTok, Instagram, GitHub, Discord, Slack, WhatsApp, Telegram, X / Twitter, Facebook, Twitch, or any other service named in a category. All trademarks and product names belong to their respective owners.
 
-No proprietary or vendor artwork is bundled. Native platform emoji rendering uses Unicode characters supplied by the operating system or browser; pixel-identical rendering with any platform or app is not promised. Asset URLs, where present in generated data, are HTTPS references only and are exposed to callers only when `allowRemoteAssets` is explicitly enabled.
+The npm package bundles **no proprietary or vendor artwork**. Native platform emoji rendering uses Unicode characters supplied by the operating system or browser; pixel-identical rendering with any platform or app is not promised. Asset URLs, where present in generated data, are HTTPS references only and are exposed to callers only when `allowRemoteAssets` is explicitly enabled. The repository's raw resource library is a research/reference corpus, not a runtime dependency.

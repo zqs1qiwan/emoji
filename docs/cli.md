@@ -53,7 +53,7 @@ Unknown tokens are left as-is. The output is plain text, never HTML.
 
 ### `apps [--json]`
 
-List the ten curated app definitions, including their ids, categories, aliases, and notes.
+List the 28 curated app definitions, including their ids, categories, aliases, and notes.
 
 ```sh
 emoji-kit apps

@@ -41,7 +41,7 @@ An explicit `assetUrl` in a definition is also gated by `allowRemoteAssets`. `as
 - Raw JSON is treated as untrusted and normalized by the build pipeline.
 - No `eval` or dynamic code execution.
 - No network or filesystem access from the core at runtime.
-- No proprietary or vendor artwork is bundled in the package.
+- No proprietary or vendor artwork is bundled in the npm package. The repository also contains a separate raw resource library under `resources/**` for research/reference; it is not shipped or loaded by the core.
 - `renderText()` returns plain text and never emits HTML.
 
 Because asset URLs are external, consumers are responsible for any network requests they choose to make, including respecting the terms of the remote host. The GitHub app overlay uses a pinned URL index subject to the GitHub API Terms; see [NOTICE](../NOTICE) and [app categories](app-categories.md).

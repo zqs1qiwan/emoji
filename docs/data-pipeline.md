@@ -7,7 +7,8 @@ emoji-kit ships a deterministic dataset so that importing the package never requ
 All human-maintained inputs are under `data/sources`:
 
 - `sources.json` — pinned upstream sources with exact versions, sha256 hashes, and license labels.
-- `app-categories.json` — curated app overlays: categories and alias maps for the ten supported app ids.
+- `app-categories.json` — curated app overlays: categories and alias maps for the 28 supported app ids.
+- `resource-sources.json` — separate pinned public repositories for the raw resource library under `resources/**` (files are not normalized into runtime data).
 
 Pinned sources (Unicode / Emoji 18.0, CLDR 49):
 

@@ -12,6 +12,7 @@ const artifactNames = [
 const artifactDirs = ['.npm-cache', 'data/cache'];
 const sessionPattern = /session-[0-9a-f]{8,}/i;
 const roots = ['README.md', 'AGENTS.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'NOTICE', 'LICENSE', 'docs', 'src', 'scripts', 'data/sources', 'package.json', '.github', 'examples'].filter((p) => fs.existsSync(p));
+const allowedResourceRoots = ['resources'];
 const offenders = [];
 
 function walk(file) {
@@ -20,8 +21,11 @@ function walk(file) {
     return;
   }
   const normalized = file.replaceAll('\\', '/');
-  if (/\.(png|jpe?g|gif|webp|ico)$/i.test(file)) {
-    offenders.push(`${file}: binary artwork`);
+  const isAllowedResource = allowedResourceRoots.some(
+    (root) => normalized === root || normalized.startsWith(`${root}/`),
+  );
+  if (/\.(png|jpe?g|gif|webp|ico)$/i.test(file) && !isAllowedResource) {
+    offenders.push(`${file}: binary artwork outside the intentional resource library`);
     return;
   }
   if (normalized.startsWith('node_modules/')) return;
