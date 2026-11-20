@@ -60,12 +60,12 @@ A record contains `url`, `ref`, `sha256`, `bytes`, `license`, `repository`, `sou
 
 Do not look for llms.txt, docs, or examples inside node_modules/emoji-kit. The v0.2 npm tarball ships the programmatic API and catalog only, not repository agent documentation or examples. Fetch repository artifacts from pinned raw URLs at the emoji-kit commit shown below.
 
-Pinned emoji-kit repository commit: 76e75e8dbffb9e330bf542aecece904a4bc0aebe
-- llms.txt: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/llms.txt
-- Agent guide: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/docs/agents.md
-- Resource contract: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/docs/agent-resource-contract.md
-- API reference: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/docs/api.md
-- Catalog example: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/examples/agent-catalog.mjs
-- Fetch example: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/examples/fetch-resource.mjs
+Pinned emoji-kit repository commit: ab1e6f4a458cc61708e3aac946c075c58f9206f7
+- llms.txt: https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/llms.txt
+- Agent guide: https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/docs/agents.md
+- Resource contract: https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/docs/agent-resource-contract.md
+- API reference: https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/docs/api.md
+- Catalog example: https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/examples/agent-catalog.mjs
+- Fetch example: https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/examples/fetch-resource.mjs
 
 Always verify the pinned commit corresponds to the package version before relying on documentation. Raw upstream artwork URLs come from each catalog record and are pinned by upstream commit; they are separate from the emoji-kit repository commit.

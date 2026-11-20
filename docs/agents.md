@@ -83,13 +83,13 @@ The npm tarball ships the programmatic API and generated catalog only. It does n
 
 Fetch repository documentation and examples from GitHub raw URLs pinned to one exact emoji-kit commit:
 
-- `https://raw.githubusercontent.com/zqs1qiwan/emoji/<commit>/llms.txt`
-- `https://raw.githubusercontent.com/zqs1qiwan/emoji/<commit>/docs/agents.md`
-- `https://raw.githubusercontent.com/zqs1qiwan/emoji/<commit>/docs/agent-resource-contract.md`
-- `https://raw.githubusercontent.com/zqs1qiwan/emoji/<commit>/examples/agent-catalog.mjs`
-- `https://raw.githubusercontent.com/zqs1qiwan/emoji/<commit>/examples/fetch-resource.mjs`
+- `https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/llms.txt`
+- `https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/docs/agents.md`
+- `https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/docs/agent-resource-contract.md`
+- `https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/examples/agent-catalog.mjs`
+- `https://raw.githubusercontent.com/zqs1qiwan/emoji/ab1e6f4a458cc61708e3aac946c075c58f9206f7/examples/fetch-resource.mjs`
 
-Replace `<commit>` consistently with the exact emoji-kit commit that was inspected. Artwork URLs in catalog records are upstream URLs pinned to upstream commits; they are separate from the repository commit.
+The pinned commit above is the exact emoji-kit commit that was inspected. Artwork URLs in catalog records are upstream URLs pinned to upstream commits; they are separate from the repository commit.
 
 ## Contributor rules
 
