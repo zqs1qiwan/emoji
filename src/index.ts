@@ -353,4 +353,24 @@ export const { emojis: datasetEmojis, apps: datasetApps, aliases, metadata } = e
 export const emojis = datasetEmojis;
 export const apps = datasetApps;
 
+export {
+  getResource,
+  listResources,
+  resolveResource,
+  resourceCatalog,
+  resources,
+  resourceSources,
+} from './resources.js';
+export type {
+  AppDefinition,
+  EmojiRecord,
+  EmojiSkin,
+  EmojiVariant,
+  ResourceCatalog,
+  ResourceListOptions,
+  ResourceQuery,
+  ResourceRecord,
+  ResourceSource,
+} from './types.js';
+
 export default emoji;

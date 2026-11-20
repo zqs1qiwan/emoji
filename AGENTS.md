@@ -2,6 +2,10 @@
 
 These rules apply to any agent contributing to `emoji-kit`. Keep changes small, public-facing, and reproducible.
 
+## Consumer versus contributor usage
+
+Coding agents and package consumers use the package API; they do not need the repository tree to resolve catalog metadata. Start with `llms.txt`, then read `docs/agents.md` and `docs/agent-resource-contract.md` from a pinned GitHub commit. The npm tarball does not ship those repository-only files or `examples/`; it ships the programmatic API and generated catalog. Contributor rules below apply to source and documentation changes, not consumers of the package.
+
 ## Where to change things
 
 - **Behavior and API:** edit TypeScript under `src/**`. Add or update tests under `tests/**`.

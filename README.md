@@ -14,6 +14,7 @@
 - [安装与快速开始 / Install and quick start](#安装与快速开始--install-and-quick-start)
 - [定义式调用 / Definition calls](#定义式调用--definition-calls)
 - [App 分类 / App categories](#app-分类--app-categories)
+- [AI Agent 与资源访问 / AI agents and resource access](#ai-agent-与资源访问--ai-agents-and-resource-access)
 - [CLI、React 与导出 / CLI, React and exports](#cli-react-与导出--cli-react-and-exports)
 - [数据、隐私与安全 / Data, privacy and security](#数据隐私与安全--data-privacy-and-security)
 - [开发 / Development](#开发--development)
@@ -29,7 +30,7 @@
 - **安全渲染**：`renderText()` 把 `:shortcode:` 替换为 Unicode 字符，**绝不输出 HTML**；原始 JSON 按不可信输入处理，无 `eval`，URL 仅允许 HTTPS。
 - **隐私优先**：原生平台 emoji 使用 Unicode 字符；远程资源 URL 必须通过 `allowRemoteAssets` 显式开启；不捆绑任何厂商美术资源。
 - **类型完善、可 tree-shake**：完整 TypeScript 声明，`sideEffects: false`，提供 `core`、`data`、`apps`、`react`、`cli` 子路径导出。
-- **额外原始资源库**：仓库中的 `resources/**` 单独保存 6 个固定公开来源的原始文件（Twemoji、OpenMoji、Noto Emoji、Fluent Emoji，以及社区整理的 TikTok / 抖音表情），共 15,975 个文件；按来源和 App 保留原始目录，并通过 `resources/manifest.json` 记录 commit、URL、许可证、sha256 和文件大小。该资源库不参与 npm 包，也不会混入运行时数据。
+- **额外原始资源库**：仓库中的 `resources/**` 单独保存 8 个固定公开来源的原始文件（Twemoji、OpenMoji、Noto Emoji、Fluent Emoji，以及社区整理的 TikTok / 抖音 / 微信 / 微博表情），共 17,026 个文件；按来源和 App 保留原始目录，并通过 `resources/manifest.json` 记录 commit、URL、许可证、sha256 和文件大小。该资源库不参与 npm 包，也不会混入运行时数据。
 - **确定性数据**：Unicode / Emoji 18.0、CLDR 49，1,958 个 emoji、3,983 个唯一 shortcode（4,020 条别名记录）、1,431 条资源记录、28 个 App 分类和 612 个 App 标签；由固定来源和 sha256 校验确定性重建，无时间戳。
 
 **English**
@@ -40,7 +41,7 @@
 - **Safe rendering.** `renderText()` replaces `:shortcode:` tokens with Unicode characters and **never emits HTML**. Raw JSON is treated as untrusted; no `eval`; all referenced URLs are HTTPS.
 - **Privacy-friendly by default.** Native platform emoji uses Unicode characters. Remote asset URLs are opt-in only via `allowRemoteAssets`, and no proprietary artwork is bundled.
 - **Typed and tree-shakeable.** Full TypeScript declarations, `sideEffects: false`, and focused subpath exports (`core`, `data`, `apps`, `react`, `cli`).
-- **Extra raw resource library.** The repository preserves 15,975 original files from six pinned public sources under `resources/**` (Twemoji, OpenMoji, Noto Emoji, Fluent Emoji, and community TikTok/Douyin collections). Original per-source/app structure is retained; `resources/manifest.json` records commits, URLs, licenses, sha256 hashes, and sizes. This library is excluded from the npm package and never merged into runtime data.
+- **Extra raw resource library.** The repository preserves 17,026 original files from eight pinned public sources under `resources/**` (Twemoji, OpenMoji, Noto Emoji, Fluent Emoji, and community TikTok/Douyin/WeChat/Weibo collections). Original per-source/app structure is retained; `resources/manifest.json` records commits, URLs, licenses, sha256 hashes, and sizes. This library is excluded from the npm package and never merged into runtime data.
 - **Deterministic data.** Unicode/Emoji 18.0 and CLDR 49 data, 1,958 emojis, 3,983 unique shortcode aliases (4,020 alias records), 1,431 asset records, 28 curated app categories and 612 app tags — rebuilt from pinned sources with sha256 checksums.
 
 ## 安装与快速开始 / Install and quick start
@@ -118,6 +119,30 @@ kit.list({ app: 'tiktok' });
 ```
 
 See [the API reference](docs/api.md) for all methods and options.
+
+## AI Agent 与资源访问 / AI agents and resource access
+
+**中文**：AI 编码 Agent 应先读取仓库根目录的 [llms.txt](llms.txt)，再按需使用 [Agent 集成指南](docs/agents.md) 和 [v0.2 资源契约](docs/agent-resource-contract.md)。包内提供离线 Unicode API 与原始资源目录：字符、shortcode、搜索、纯文本渲染使用 `emoji` / `get` / `search` / `list` / `renderText`；需要固定来源的 SVG/PNG/许可证元数据时使用 `getResource` / `resolveResource` / `listResources`。打包器不会在 npm 包内提供文档或示例；仓库中的 `llms.txt`、`docs/`、`examples/` 应从固定 emoji-kit commit 的 GitHub raw URL 获取。`emoji-kit/resources` 子路径和 `resources` CLI 命令不存在于 v0.2。
+
+```js
+import { resolveResource, listResources } from 'emoji-kit';
+
+const one = resolveResource({ sourceId: 'wechat-community-png', format: 'png' });
+const many = listResources({ app: 'weibo', format: 'png', limit: 3 });
+```
+
+目录只有元数据；资源获取是调用方的显式操作。使用返回记录的 `url` 和 `sha256`，不得猜测或重构 URL，并遵守 `license`。当前目录含 8 个来源、17,026 条记录（17,018 个美术资源、8 个许可证），打包在包内。可运行示例：`node examples/agent-catalog.mjs`；可选网络校验示例：`node examples/fetch-resource.mjs`。
+
+**English**: Coding agents should start with the repository [llms.txt](llms.txt), then use [Agent integration guide](docs/agents.md) and [the v0.2 resource contract](docs/agent-resource-contract.md). The package exposes an offline Unicode API and raw-resource catalog: use `emoji` / `get` / `search` / `list` / `renderText` for characters, shortcodes, search, and plain-text rendering; use `getResource` / `resolveResource` / `listResources` for pinned SVG/PNG/license metadata. The npm tarball does not ship repository docs or examples. Fetch `llms.txt`, `docs/`, and `examples/` from raw GitHub URLs pinned to an exact emoji-kit commit. There is no `emoji-kit/resources` subpath or `resources` CLI command in v0.2.
+
+```js
+import { resolveResource, listResources } from 'emoji-kit';
+
+const one = resolveResource({ sourceId: 'wechat-community-png', format: 'png' });
+const many = listResources({ app: 'weibo', format: 'png', limit: 3 });
+```
+
+The catalog is metadata only. Fetching a file is an explicit caller action. Use the returned record's `url` and `sha256`; never guess or reconstruct URLs, and respect `license`. The current catalog contains 8 sources and 17,026 records (17,018 artwork assets and 8 licenses) and is shipped inside the package. Runnable example: `node examples/agent-catalog.mjs`; opt-in network verification: `node examples/fetch-resource.mjs`.
 
 ## 定义式调用 / Definition calls
 

@@ -131,9 +131,43 @@ emoji.resolveAsset({ name: 'thumbsup', platform: 'github' }); // undefined
 emoji.resolveAsset({ name: 'thumbsup', platform: 'github', allowRemoteAssets: true });
 ```
 
+## Raw resource catalog
+
+The v0.2 catalog resolves metadata for raw, pinned artwork and license files without network or filesystem access at runtime.
+
+```js
+import {
+  getResource,
+  listResources,
+  resolveResource,
+  resources,
+  resourceSources,
+  resourceCatalog,
+} from 'emoji-kit';
+
+getResource('twemoji-svg:1f44d.svg');
+resolveResource({ sourceId: 'weibo-community-png', format: 'png' });
+listResources({ app: 'wechat', format: 'png', limit: 5 });
+```
+
+- `getResource(input)` requires an exact id, path, or URL (string or query with `id`, `path`, or `url`). Unknown input returns `undefined`.
+- `resolveResource(input)` matches an exact identifier or, for an identifier-less filter query, returns the first path-sorted match. Unknown input returns `undefined`.
+- `listResources(options?)` AND-combines `sourceId`, `app`, `category`, `format`, and `kind` filters. Results are path-sorted; default limit is 20 and maximum is 500. Unknown filters are ignored and unknown values produce `[]`.
+- `resources` is the flat readonly, path-sorted record list; `resourceSources` is the readonly source list; `resourceCatalog` contains both plus deterministic counts.
+
+The root and `emoji-kit/core` export all functions and catalog values. `emoji-kit/data` exports the three catalog values only, plus existing data values; it has no lookup functions:
+
+```js
+import { resources, resourceSources, resourceCatalog } from 'emoji-kit/data';
+
+console.log(resourceCatalog.counts.files, resources.length);
+```
+
+Each `ResourceRecord` has `id`, `path`, `sourceId`, `app`, `category`, `kind`, `format`, `upstreamPath`, `url`, `sha256`, `bytes`, `ref`, `repository`, and `license`. The package never fetches the record URL or returns file bytes. Use the URL explicitly in caller-owned code and verify the downloaded bytes against SHA-256. The current catalog has 8 sources and 17,026 records (17,018 artwork assets and 8 license records). There is no `emoji-kit/resources` subpath in v0.2.
+
 ## Data exports
 
-`emoji-kit/data` (and the `emoji-kit/apps` alias) expose generated JSON as typed values: `emojis`, `aliases`, `apps`, `assets`, and `metadata`. These are read-only by convention; do not mutate them. See [data and pipeline](data-pipeline.md) and [app categories](app-categories.md).
+`emoji-kit/data` (and the `emoji-kit/apps` alias) expose generated JSON as typed values: `emojis`, `aliases`, `apps`, `assets`, `metadata`, `resources`, `resourceSources`, and `resourceCatalog`. These are read-only by convention; do not mutate them. See [data and pipeline](data-pipeline.md), [agent integration](agents.md), and [app categories](app-categories.md).
 
 ## React adapter
 

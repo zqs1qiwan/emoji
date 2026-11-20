@@ -8,6 +8,7 @@ export const generatedFiles = [
   'apps.json',
   'assets.json',
   'meta.json',
+  'resources.json',
   'checksums.json',
 ];
 

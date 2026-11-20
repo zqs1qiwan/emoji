@@ -122,6 +122,46 @@
       "licenseFileUrl": "https://raw.githubusercontent.com/hnlyzxf/douyin-emoji/e1e0395662634c48c4073a6d8fba6138121a53d2/LICENSE",
       "ownershipNote": "Community-collected Douyin small emoji images. Not an official Douyin asset pack; review upstream licensing before redistribution.",
       "expectedFiles": 415
+    },
+    {
+      "id": "wechat-community-png",
+      "category": "app",
+      "app": "wechat",
+      "sourceType": "community-repository",
+      "provider": "GitHub",
+      "repository": "qiuyinghua/wechat-emoticons",
+      "repositoryUrl": "https://github.com/qiuyinghua/wechat-emoticons",
+      "ref": "84dd89931784f0fab874994dbc7e6ed14964a04d",
+      "refType": "commit",
+      "pathPrefix": "images",
+      "filePattern": "\\.png$",
+      "destinationPrefix": "resources/wechat/community-png/png",
+      "license": "GPL-3.0",
+      "licenseUrl": "https://raw.githubusercontent.com/qiuyinghua/wechat-emoticons/84dd89931784f0fab874994dbc7e6ed14964a04d/LICENSE",
+      "licenseFile": "resources/wechat/LICENSE.txt",
+      "licenseFileUrl": "https://raw.githubusercontent.com/qiuyinghua/wechat-emoticons/84dd89931784f0fab874994dbc7e6ed14964a04d/LICENSE",
+      "ownershipNote": "Community collection of WeChat emoticon faces (100 classic smiley plus 5 WeChat-specific faces) mirrored from the upstream repository under GPL-3.0. Not an official WeChat asset pack; WeChat and QQ are trademarks of Tencent. Reuse must follow the upstream GPL-3.0 terms.",
+      "expectedFiles": 106
+    },
+    {
+      "id": "weibo-community-png",
+      "category": "app",
+      "app": "weibo",
+      "sourceType": "community-repository",
+      "provider": "GitHub",
+      "repository": "ArvinZJC/WeiboEmoji",
+      "repositoryUrl": "https://github.com/ArvinZJC/WeiboEmoji",
+      "ref": "4bc29b5d175cbe972e7ab78f36db87538485b139",
+      "refType": "commit",
+      "pathPrefix": "img",
+      "filePattern": "\\.png$",
+      "destinationPrefix": "resources/weibo/community-png/png",
+      "license": "GPL-3.0",
+      "licenseUrl": "https://raw.githubusercontent.com/ArvinZJC/WeiboEmoji/4bc29b5d175cbe972e7ab78f36db87538485b139/LICENCE",
+      "licenseFile": "resources/weibo/LICENSE.txt",
+      "licenseFileUrl": "https://raw.githubusercontent.com/ArvinZJC/WeiboEmoji/4bc29b5d175cbe972e7ab78f36db87538485b139/LICENCE",
+      "ownershipNote": "Community collection of Weibo emoji images mirrored from the upstream repository under GPL-3.0; the upstream README additionally states that the emoji images should never be used for commercial purposes. Not an official Weibo asset pack; Weibo and Sina are trademarks of their respective owners. The upstream repository is archived.",
+      "expectedFiles": 943
     }
   ]
 }

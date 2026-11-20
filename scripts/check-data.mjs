@@ -21,5 +21,14 @@ for (const [name, expected] of Object.entries(checksums)) {
   }
 }
 
+// Every generated file has to be covered by a checksum entry.
+for (const name of fs.readdirSync(dir)) {
+  if (name === 'checksums.json' || !name.endsWith('.json')) continue;
+  if (!(name in checksums)) {
+    console.error(`UNCHECKED ${name}`);
+    ok = false;
+  }
+}
+
 if (!ok) process.exit(1);
 console.log(`Verified ${Object.keys(checksums).length} generated data files.`);

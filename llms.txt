@@ -1,0 +1,71 @@
+# emoji-kit
+
+Package: emoji-kit
+Install: npm install emoji-kit
+Requirement: Node.js 18+
+License: MIT for emoji-kit; every raw artwork/license record carries its upstream license.
+
+## Use the package
+
+emoji-kit provides Unicode emoji lookup, shortcode/search/list, plain-text rendering, app overlays, isolated kits, and the v0.2 offline raw-resource catalog.
+
+ESM:
+```js
+import emoji, {
+  get, search, list, renderText,
+  getResource, listResources, resolveResource,
+  resources, resourceSources, resourceCatalog,
+} from 'emoji-kit';
+
+emoji('thumbsup');
+get('thumbsup');
+search('thumbs up', { limit: 5 });
+list({ app: 'github', limit: 5 });
+renderText('Hi :thumbsup:');
+
+const record = resolveResource({ sourceId: 'wechat-community-png', format: 'png' });
+const matches = listResources({ app: 'weibo', format: 'png', limit: 3 });
+console.log(resourceCatalog.counts, resources.length, resourceSources.length);
+```
+
+Core entry: `emoji-kit/core` exports the same core Unicode API and resource APIs.
+Data-only entry: `emoji-kit/data` exports `resources`, `resourceSources`, and `resourceCatalog`; it also exports `emojis`, `aliases`, `apps`, `assets`, and `metadata`. It provides no functions.
+Existing React, apps, and CLI exports remain: `emoji-kit/react`, `emoji-kit/apps`, `emoji-kit/cli`, and the `emoji-kit` binary. There is no `emoji-kit/resources` subpath and no `resources` CLI command in v0.2.
+
+CommonJS:
+```js
+const { getResource, listResources, resolveResource } = require('emoji-kit');
+```
+
+## Offline catalog behavior
+
+Lookup is synchronous and pure. It reads only the checked-in static catalog and never fetches, reads the filesystem, or reads environment variables. Use `getResource` for exact id/path/url lookup, `resolveResource` for exact lookup or filter-only first-match lookup, and `listResources` for filtered lists (AND filters, path order, default limit 20, maximum 500).
+
+Example:
+```js
+resolveResource('twemoji-svg:1f44d.svg')
+resolveResource({ app: 'native', format: 'svg' })
+listResources({ app: 'wechat', format: 'png', limit: 5 })
+```
+
+## Provenance and fetching
+
+Catalog counts: 8 sources, 17,026 files, 17,018 assets, 8 license records, 190371148 bytes. App-specific saved artwork currently covers `douyin`, `tiktok`, `wechat`, and `weibo`; native saved artwork covers `native`. This catalog is community/provenance metadata, not official app data. The WeChat and Weibo collections are GPL-3.0 community collections and are not official or affiliated with their respective platforms.
+
+Count semantics: `resourceCatalog.counts` totals include license records (`counts.files` = `counts.assets` + `counts.licenses`, and `counts.totalBytes` includes license files). Per-source `resourceCatalog.sources[].fileCount` and `totalBytes` are artwork-only and exclude the separate license file; use `assetCount` + `licenseCount` or `resourceCatalog.counts` when you need totals across all files.
+
+A record contains `url`, `ref`, `sha256`, `bytes`, `license`, `repository`, `sourceId`, and `path`. Do not reconstruct URLs or use branches/latest refs. Fetch `record.url` only as an explicit caller action, then verify downloaded bytes with SHA-256 against `record.sha256`. Respect `record.license` and upstream terms.
+
+## Repository-only agent artifacts
+
+Do not look for llms.txt, docs, or examples inside node_modules/emoji-kit. The v0.2 npm tarball ships the programmatic API and catalog only, not repository agent documentation or examples. Fetch repository artifacts from pinned raw URLs at the emoji-kit commit shown below.
+
+Pinned emoji-kit repository commit: 76e75e8dbffb9e330bf542aecece904a4bc0aebe
+- llms.txt: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/llms.txt
+- Agent guide: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/docs/agents.md
+- Resource contract: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/docs/agent-resource-contract.md
+- API reference: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/docs/api.md
+- Catalog example: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/examples/agent-catalog.mjs
+- Fetch example: https://raw.githubusercontent.com/zqs1qiwan/emoji/76e75e8dbffb9e330bf542aecece904a4bc0aebe/examples/fetch-resource.mjs
+
+Always verify the pinned commit corresponds to the package version before relying on documentation. Raw upstream artwork URLs come from each catalog record and are pinned by upstream commit; they are separate from the emoji-kit repository commit.

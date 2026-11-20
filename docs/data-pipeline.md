@@ -35,8 +35,23 @@ Exact versions and checksums are in `data/sources/sources.json`. The GitHub API 
 - `assets.json` — 1,431 asset records (HTTPS URL references, not bundled artwork).
 - `meta.json` — versions, counts, and pinned source list.
 - `checksums.json` — sha256 for each generated data file.
+- `resources.json` — 17,026 raw-resource catalog records plus 8 pinned source summaries. The catalog contains 17,018 artwork assets and 8 license records, totaling 190371148 bytes.
 
 Generated output contains no timestamps, so identical inputs always produce identical files. `data/generated` is committed to the repository; never edit it by hand.
+
+## Resource catalog stage
+
+`scripts/build-resource-catalog.mjs` reads `resources/manifest.json` only and writes `data/generated/resources.json` deterministically. Records and sources are sorted by `path` and `id`; no timestamps or machine paths are emitted. `scripts/stage-data.mjs` stages it for `src/data/generated/resources.json`, and `scripts/build.mjs` includes it in `dist` and the static package API.
+
+The public values are:
+
+- `resources`, `resourceSources`, `resourceCatalog` from `emoji-kit` and `emoji-kit/core`;
+- `resources`, `resourceSources`, `resourceCatalog` from `emoji-kit/data` and `emoji-kit/apps` (data-only);
+- `getResource`, `listResources`, `resolveResource` from `emoji-kit` and `emoji-kit/core` only.
+
+No catalog subpath or runtime fetch/filesystem API is added. The catalog contains provenance and metadata only; binary artwork remains under `resources/**` in the repository and is excluded from the npm tarball. A caller may opt in to fetch `ResourceRecord.url` and must verify `sha256` locally.
+
+`npm run data:check` verifies the catalog checksum and count invariants. The raw resource library is separate from Unicode-generated runtime data and is never network-fetched by shipped code.
 
 ## Commands
 

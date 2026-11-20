@@ -24,6 +24,10 @@ The full license texts for cached sources are kept in the repository's developme
 - **Fluent Emoji color SVG** — https://github.com/microsoft/fluentui-emoji — MIT. © Microsoft and contributors.
 - **TikTok hidden emoji SVG (community reproduction)** — https://github.com/boqingren/tiktok-emojis — MIT declared in the repository README; no separate LICENSE file. **Not an official TikTok asset pack.**
 - **Douyin small emoji PNG (community collection)** — https://github.com/hnlyzxf/douyin-emoji — MIT. **Not an official Douyin asset pack.**
+- **WeChat emoticon PNG (community collection)** — https://github.com/qiuyinghua/wechat-emoticons — GPL-3.0, license text saved as `resources/wechat/LICENSE.txt`. **Not an official WeChat asset pack.**
+- **Weibo emoji PNG (community collection)** — https://github.com/ArvinZJC/WeiboEmoji — GPL-3.0, license text saved as `resources/weibo/LICENSE.txt`. **Not an official Weibo asset pack.**
+
+The WeChat and Weibo collections are community repositories: neither is published by Tencent or Sina, and neither is an official app asset pack. Both upstream projects license the files under GPL-3.0; the upstream Weibo README additionally states that the emoji images should never be used for commercial purposes, and that narrower restriction is recorded here because it applies to the artwork itself. The GPL-3.0 license texts are saved verbatim next to the files and are part of the raw library.
 
 License texts are saved alongside each source where available. Reuse of the raw files must follow the individual upstream license and any applicable trademark rules. App names identify the subject of a community collection, not official affiliation.
 
@@ -31,6 +35,6 @@ License texts are saved alongside each source where available. Reuse of the raw 
 
 The app categories in `data/sources/app-categories.json` are **curated alias and grouping overlays over Unicode base data**. They are not official datasets published by those companies, are not guaranteed complete or current, and are provided for developer convenience only. The raw resource library above is kept distinct from these runtime overlays.
 
-emoji-kit is not affiliated with, endorsed by, or sponsored by TikTok, Instagram, GitHub, Discord, Slack, WhatsApp, Telegram, X / Twitter, Facebook, Twitch, or any other service named in a category. All trademarks and product names belong to their respective owners.
+emoji-kit is not affiliated with, endorsed by, or sponsored by TikTok, Instagram, GitHub, Discord, Slack, WhatsApp, Telegram, X / Twitter, Facebook, Twitch, WeChat, Weibo, or any other service named in a category. All trademarks and product names belong to their respective owners.
 
 The npm package bundles **no proprietary or vendor artwork**. Native platform emoji rendering uses Unicode characters supplied by the operating system or browser; pixel-identical rendering with any platform or app is not promised. Asset URLs, where present in generated data, are HTTPS references only and are exposed to callers only when `allowRemoteAssets` is explicitly enabled. The repository's raw resource library is a research/reference corpus, not a runtime dependency.

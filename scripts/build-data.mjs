@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { buildResourceCatalog } from './build-resource-catalog.mjs';
 
 const root = process.cwd();
 const cacheDir = path.join(root, 'data/cache');
@@ -268,6 +269,7 @@ const files = {
   'apps.json': appData,
   'assets.json': assets,
   'meta.json': metadata,
+  'resources.json': buildResourceCatalog(root),
 };
 
 fs.mkdirSync(outDir, { recursive: true });
