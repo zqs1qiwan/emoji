@@ -54,7 +54,7 @@ Unlike the 1,431 app-overlay `assets` URL references above, this catalog indexes
 
 The catalog's public data exports are `resources`, `resourceSources` and `resourceCatalog` (from `emoji-kit`, `emoji-kit/core` and `emoji-kit/data`); the lookup helpers are `getResource`, `listResources` and `resolveResource`.
 
-This raw library is **not shipped in the npm package** and is **not loaded by the core**; `resources/**` stays in the repository for reference. The Twemoji, OpenMoji, Noto and Fluent collections are under their own open licenses (see [NOTICE](../NOTICE)). The Douyin, TikTok, WeChat and Weibo collections are **unofficial GPL-3.0 community collections** and are not official or affiliated with those platforms.
+This raw library is **not shipped in the npm package** and is **not loaded by the core**; `resources/**` stays in the repository for reference. The Twemoji, OpenMoji, Noto and Fluent collections are under their own open licenses (see [NOTICE](../NOTICE)). The WeChat and Weibo collections are **unofficial GPL-3.0 community collections**, while the TikTok and Douyin collections are MIT-licensed community collections; none are official or affiliated with those platforms.
 
 ## Safety rules
 

@@ -10,7 +10,7 @@ _Not yet published; `package.json` remains at 0.1.0 and no v0.2 release has been
 - New resource API: `getResource`, `listResources` and `resolveResource`, plus the `resources`, `resourceSources` and `resourceCatalog` data exports, available on the root, `emoji-kit/core` and `emoji-kit/data` entries (no new subpath).
 - Agent integration docs and runnable examples: `llms.txt`, `docs/agent-resource-contract.md`, `docs/agents.md` and `examples/`. These are repository-hosted and fetched from a pinned commit; they are not shipped in the npm tarball.
 - The npm tarball ships only the runtime API and the generated catalog — no artwork, docs or examples.
-- WeChat, Weibo, TikTok and Douyin artwork are unofficial GPL-3.0 community collections, not official or affiliated with those platforms.
+- WeChat and Weibo artwork are unofficial GPL-3.0 community collections, while TikTok and Douyin artwork are MIT-licensed community collections; none are official or affiliated with those platforms.
 
 ## 0.1.0
 

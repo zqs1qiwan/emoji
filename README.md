@@ -157,7 +157,7 @@ The catalog is metadata only. Fetching a file is an explicit caller action. Use 
 | wechat-community-png | wechat | png | 106 |
 | weibo-community-png | weibo | png | 943 |
 
-Total: 17,026 files (17,018 artwork + 8 license records). The Douyin, TikTok, WeChat and Weibo collections are GPL-3.0 community collections, unofficial and non-affiliated.
+Total: 17,026 files (17,018 artwork + 8 license records). The WeChat and Weibo collections are GPL-3.0 community collections, while the TikTok and Douyin collections are MIT-licensed community collections; all are unofficial and non-affiliated.
 
 ## 定义式调用 / Definition calls
 
