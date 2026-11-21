@@ -15,7 +15,7 @@ Native emoji are rendered by the operating system or browser font. emoji-kit doe
 
 ## Asset records
 
-The generated dataset includes 1,431 asset records mapping emoji ids to platform-specific **HTTPS URL references**. These are pointers to externally hosted artwork, not bundled files.
+The generated dataset includes 1,431 asset records mapping emoji ids to platform-specific **HTTPS URL references**. These are v0.1 app-overlay asset URL references — **distinct from the v0.2 raw resource catalog** (documented below), which indexes saved files in the repository rather than remote pointers. These records are pointers to externally hosted artwork, not bundled files.
 
 By design, **no remote asset URL is returned unless you opt in**:
 
@@ -34,6 +34,27 @@ emoji({ name: 'thumbsup', platform: 'github', allowRemoteAssets: true }).assetUr
 ```
 
 An explicit `assetUrl` in a definition is also gated by `allowRemoteAssets`. `assetFallback` (`'base' | 'none'`) is a reserved preference for consumers; the core never fetches a fallback itself.
+
+## Raw resource catalog (v0.2)
+
+The repository also preserves a **raw resource library** under `resources/**`: 8 pinned public sources, 17,026 files (17,018 artwork files + 8 license records), totaling 190,371,148 bytes. It is generated deterministically from `resources/manifest.json`, and every catalog record captures the source commit, upstream HTTPS URL, license, sha256 and byte size.
+
+Unlike the 1,431 app-overlay `assets` URL references above, this catalog indexes **saved files** in the repository, not remote asset pointers.
+
+| Source id | App | Format | Artwork records |
+| --- | --- | --- | --- |
+| twemoji-svg | native | svg | 4009 |
+| openmoji-color-svg | native | svg | 4567 |
+| noto-emoji-2d-png-128 | native | png | 3787 |
+| fluent-emoji-color-svg | native | svg | 3145 |
+| douyin-community-png | douyin | png | 415 |
+| tiktok-community-svg | tiktok | svg | 46 |
+| wechat-community-png | wechat | png | 106 |
+| weibo-community-png | weibo | png | 943 |
+
+The catalog's public data exports are `resources`, `resourceSources` and `resourceCatalog` (from `emoji-kit`, `emoji-kit/core` and `emoji-kit/data`); the lookup helpers are `getResource`, `listResources` and `resolveResource`.
+
+This raw library is **not shipped in the npm package** and is **not loaded by the core**; `resources/**` stays in the repository for reference. The Twemoji, OpenMoji, Noto and Fluent collections are under their own open licenses (see [NOTICE](../NOTICE)). The Douyin, TikTok, WeChat and Weibo collections are **unofficial GPL-3.0 community collections** and are not official or affiliated with those platforms.
 
 ## Safety rules
 

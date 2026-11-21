@@ -32,3 +32,6 @@ jobs:
 
       - name: Check public documentation hygiene
         run: npm run check:public
+
+      - name: Check raw resource library
+        run: node scripts/collect-resources.mjs --check

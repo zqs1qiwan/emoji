@@ -144,6 +144,21 @@ const many = listResources({ app: 'weibo', format: 'png', limit: 3 });
 
 The catalog is metadata only. Fetching a file is an explicit caller action. Use the returned record's `url` and `sha256`; never guess or reconstruct URLs, and respect `license`. The current catalog contains 8 sources and 17,026 records (17,018 artwork assets and 8 licenses) and is shipped inside the package. Runnable example: `node examples/agent-catalog.mjs`; opt-in network verification: `node examples/fetch-resource.mjs`.
 
+**资源目录覆盖 / Resource catalog coverage**
+
+| Source id | App | Format | Artwork records |
+| --- | --- | --- | --- |
+| twemoji-svg | native | svg | 4009 |
+| openmoji-color-svg | native | svg | 4567 |
+| noto-emoji-2d-png-128 | native | png | 3787 |
+| fluent-emoji-color-svg | native | svg | 3145 |
+| douyin-community-png | douyin | png | 415 |
+| tiktok-community-svg | tiktok | svg | 46 |
+| wechat-community-png | wechat | png | 106 |
+| weibo-community-png | weibo | png | 943 |
+
+Total: 17,026 files (17,018 artwork + 8 license records). The Douyin, TikTok, WeChat and Weibo collections are GPL-3.0 community collections, unofficial and non-affiliated.
+
 ## 定义式调用 / Definition calls
 
 **中文**

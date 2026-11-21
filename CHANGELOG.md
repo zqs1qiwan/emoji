@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here. This project follows semantic versioning.
 
+## Unreleased — agent resource platform (v0.2)
+
+_Not yet published; `package.json` remains at 0.1.0 and no v0.2 release has been made._
+
+- Offline raw-resource catalog: 8 pinned sources, 17,026 files (17,018 artwork + 8 license records), 190,371,148 bytes, generated deterministically from `resources/manifest.json` with each record's source commit, HTTPS URL, license, sha256 and byte size.
+- New resource API: `getResource`, `listResources` and `resolveResource`, plus the `resources`, `resourceSources` and `resourceCatalog` data exports, available on the root, `emoji-kit/core` and `emoji-kit/data` entries (no new subpath).
+- Agent integration docs and runnable examples: `llms.txt`, `docs/agent-resource-contract.md`, `docs/agents.md` and `examples/`. These are repository-hosted and fetched from a pinned commit; they are not shipped in the npm tarball.
+- The npm tarball ships only the runtime API and the generated catalog — no artwork, docs or examples.
+- WeChat, Weibo, TikTok and Douyin artwork are unofficial GPL-3.0 community collections, not official or affiliated with those platforms.
+
 ## 0.1.0
 
 Initial release.
